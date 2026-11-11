@@ -70,7 +70,17 @@ details{margin:8px 0}summary{cursor:pointer;font-weight:600}
   <h2 style="margin-top:0">Track every sale, not just one</h2>
   <p>The Seller Profit &amp; Pricing Tracker does this math for all your products and months in one spreadsheet.</p>
   <p><a class="pill" href="https://digital-worlds-lab.whop.site/?utm_source=calculator">See the tracker</a></p>
-  <!-- EMAIL CAPTURE: replace with Kit form embed once the Kit account exists -->
+</div>
+
+<div class="card" id="signup">
+  <h2 style="margin-top:0">Get the free Etsy profit cheat sheet + new seller tools</h2>
+  <p class="note" style="margin-top:0">One email with the cheat sheet, then occasional tips and new tools. Unsubscribe anytime.</p>
+  <form id="kitForm" action="https://app.kit.com/forms/10174980/subscriptions" method="post" target="_blank" style="display:flex;gap:8px;flex-wrap:wrap">
+    <label for="kitEmail" style="position:absolute;left:-9999px">Email address</label>
+    <input id="kitEmail" name="email_address" type="email" required placeholder="you@example.com" autocomplete="email" style="flex:1 1 220px">
+    <button class="pill" type="submit" style="border:0;cursor:pointer;font-size:16px">Send it to me</button>
+  </form>
+  <p id="kitMsg" class="note" role="status" aria-live="polite"></p>
 </div>
 
 <div class="card">
@@ -99,7 +109,16 @@ function calc(){
   const rate=1-0.065-pct/100-ads/100;
   $('need').textContent=rate>0?f((t+c+list+fix)/rate - s):'n/a';
 }
-document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+document.querySelectorAll('.grid input,.grid select').forEach(e=>e.addEventListener('input',calc));calc();
+$('kitForm').addEventListener('submit',async e=>{
+  e.preventDefault();const form=e.target,btn=form.querySelector('button');btn.disabled=true;
+  try{
+    const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(!r.ok){$('kitMsg').textContent='That didn\'t work. Please check the email address and try again.';btn.disabled=false;return}
+    form.hidden=true;$('kitMsg').textContent='Check your inbox to confirm.';
+  }catch(_){form.submit();$('kitMsg').textContent='Check your inbox to confirm.';}
+  btn.disabled=false;
+});
 </script>
 </body>
 </html>
