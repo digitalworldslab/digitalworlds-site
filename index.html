@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Etsy Digital Download Fee Calculator (2026) – Free</title>
+<meta name="description" content="Free Etsy fee calculator for digital downloads and physical items: listing fee, 6.5% transaction fee, payment processing and Offsite Ads. See your real profit per sale and the price you need.">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+.row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none}
+small,.note{color:var(--muted);font-size:13px}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+</style>
+<link rel="canonical" href="https://digitalworlds.cc/">
+<meta property="og:title" content="Free Etsy Fee & Profit Calculator (2026)">
+<meta property="og:description" content="See every Etsy fee and your real profit per sale. Digital downloads and physical items.">
+<meta property="og:url" content="https://digitalworlds.cc/">
+<meta property="og:type" content="website">
+<!-- PINTEREST CLAIM: paste the p:domain_verify meta tag from Pinterest > Settings > Claimed accounts here -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does Etsy charge fees on digital downloads?","acceptedAnswer":{"@type":"Answer","text":"Yes. The listing fee, 6.5% transaction fee and payment processing apply the same way. There is just no shipping."}},
+{"@type":"Question","name":"Is the transaction fee charged on shipping?","acceptedAnswer":{"@type":"Answer","text":"Yes, 6.5% applies to the item price plus shipping and gift wrap you charge."}},
+{"@type":"Question","name":"What are Offsite Ads fees?","acceptedAnswer":{"@type":"Answer","text":"If a buyer clicks an Etsy ad on another site and buys within 30 days, Etsy charges 15% (12% for shops above $10,000 a year), capped at $100 per order."}}]}</script>
+</head>
+<body>
+<main>
+<h1>Etsy Fee &amp; Profit Calculator</h1>
+<p class="sub">For digital downloads and physical items. Type your price, see every fee and what you actually keep.</p>
+
+<div class="card grid">
+  <div><label for="price">Item price</label><input id="price" type="number" step="0.01" value="12"></div>
+  <div><label for="ship">Shipping charged (0 for digital)</label><input id="ship" type="number" step="0.01" value="0"></div>
+  <div><label for="cost">Your cost per sale (materials, postage)</label><input id="cost" type="number" step="0.01" value="0"></div>
+  <div><label for="region">Payment processing rate</label>
+    <select id="region">
+      <option value="3|0.25">United States (3% + 0.25)</option>
+      <option value="4|0.30" selected>EU / most of Europe (approx. 4% + 0.30)</option>
+      <option value="4|0.20">United Kingdom (approx. 4% + 0.20)</option>
+      <option value="custom">Custom…</option>
+    </select></div>
+  <div id="customBox" hidden><label>Custom % + fixed</label><div style="display:flex;gap:6px"><input id="cp" type="number" step="0.1" value="4"><input id="cf" type="number" step="0.01" value="0.30"></div></div>
+  <div><label for="ads">Sale came from Offsite Ads?</label>
+    <select id="ads"><option value="0">No</option><option value="15">Yes – 15%</option><option value="12">Yes – 12% (shops over $10k/yr)</option></select></div>
+  <div><label for="target">Target profit per sale</label><input id="target" type="number" step="0.01" value="8"></div>
+</div>
+
+<div class="card">
+  <div class="row"><span>Listing / renewal fee</span><span id="fList"></span></div>
+  <div class="row"><span>Transaction fee (6.5% of price + shipping)</span><span id="fTx"></span></div>
+  <div class="row"><span>Payment processing</span><span id="fPay"></span></div>
+  <div class="row"><span>Offsite Ads</span><span id="fAds"></span></div>
+  <div class="row"><span><b>Total Etsy fees</b></span><span id="fTot"></span></div>
+  <div class="row"><span>Your costs</span><span id="fCost"></span></div>
+  <p>You keep per sale: <span class="big" id="net"></span> <small id="margin"></small></p>
+  <p>Price needed for your target profit: <b id="need"></b></p>
+  <p class="note">Fees in the same currency as your price. Listing fee is $0.20 (converted roughly). Rates differ by country and change; check Etsy's Fees &amp; Payments policy for your shop. VAT/sales tax collected by Etsy is not included.</p>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0">Track every sale, not just one</h2>
+  <p>The Seller Profit &amp; Pricing Tracker does this math for all your products and months in one spreadsheet.</p>
+  <p><a class="pill" href="https://digital-worlds-lab.whop.site/?utm_source=calculator">See the tracker</a></p>
+  <!-- EMAIL CAPTURE: replace with Kit form embed once the Kit account exists -->
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>Does Etsy charge fees on digital downloads?</summary><p>Yes. The listing fee, 6.5% transaction fee and payment processing apply the same way. There is just no shipping.</p></details>
+  <details><summary>Is the transaction fee charged on shipping?</summary><p>Yes, 6.5% applies to the item price plus shipping and gift wrap you charge.</p></details>
+  <details><summary>What are Offsite Ads fees?</summary><p>If a buyer clicks an Etsy ad on another site and buys within 30 days, Etsy charges 15% (12% for shops above $10,000 a year), capped at $100 per order.</p></details>
+  <details><summary>How do I price to hit a profit target?</summary><p>Enter your target above. The calculator works backwards from all percentage and fixed fees.</p></details>
+</div>
+<p class="note">Made by Digital Worlds Lab. Free to use. Not affiliated with Etsy, Inc.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const f=v=>(Math.round(v*100)/100).toFixed(2);
+function calc(){
+  const p=+$('price').value||0,s=+$('ship').value||0,c=+$('cost').value||0,t=+$('target').value||0;
+  let pct,fix;
+  if($('region').value==='custom'){pct=+$('cp').value;fix=+$('cf').value;$('customBox').hidden=false}
+  else{[pct,fix]=$('region').value.split('|').map(Number);$('customBox').hidden=true}
+  const ads=+$('ads').value, list=0.20, gross=p+s;
+  const tx=gross*0.065, pay=gross*pct/100+fix, ad=Math.min(gross*ads/100,100);
+  const fees=list+tx+pay+ad, net=gross-fees-c;
+  $('fList').textContent=f(list);$('fTx').textContent=f(tx);$('fPay').textContent=f(pay);$('fAds').textContent=f(ad);
+  $('fTot').textContent=f(fees);$('fCost').textContent=f(c);$('net').textContent=f(net);
+  $('margin').textContent=gross?`(${Math.round(net/gross*100)}% of what the buyer pays)`:'';
+  const rate=1-0.065-pct/100-ads/100;
+  $('need').textContent=rate>0?f((t+c+list+fix)/rate - s):'n/a';
+}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body>
+</html>
