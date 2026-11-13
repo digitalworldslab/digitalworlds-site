@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Debt Snowball vs Avalanche Calculator – Free Payoff Date</title>
+<meta name="description" content="Free debt snowball and avalanche calculator. Add your debts, choose a method and an extra monthly payment, and see your debt-free date, payoff order and total interest.">
+<link rel="canonical" href="https://digitalworlds.cc/debt-snowball-calculator/">
+<meta property="og:title" content="Debt Snowball vs Avalanche Calculator – Free Payoff Date">
+<meta property="og:description" content="Free debt snowball and avalanche calculator. Add your debts, choose a method and an extra monthly payment, and see your debt-free date, payoff order and total interest.">
+<meta property="og:url" content="https://digitalworlds.cc/debt-snowball-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Debt Snowball &amp; Avalanche Calculator", "url": "https://digitalworlds.cc/debt-snowball-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the debt snowball method?", "acceptedAnswer": {"@type": "Answer", "text": "Pay minimums on every debt and put every extra dollar on the smallest balance. When it is paid off, roll its payment into the next smallest."}}, {"@type": "Question", "name": "What is the debt avalanche method?", "acceptedAnswer": {"@type": "Answer", "text": "Same idea, but the extra goes to the debt with the highest interest rate first. It usually costs less interest."}}, {"@type": "Question", "name": "Which is better, snowball or avalanche?", "acceptedAnswer": {"@type": "Answer", "text": "Avalanche is cheaper on paper. Snowball gives faster wins, which helps many people stick with the plan. The calculator shows the difference for your debts."}}, {"@type": "Question", "name": "Does the calculator keep my data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything runs in your browser and nothing is sent or saved."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Debt Snowball &amp; Avalanche Calculator</h1>
+<p class="sub">Add your debts and any extra you can pay each month. See your debt-free date, payoff order and interest for both methods.</p>
+<div class="card scroll"><table class="debt" id="tbl"><tr><th>Debt</th><th>Balance</th><th>APR %</th><th>Min. payment</th></tr></table>
+<p><button class="ghost" id="add" type="button">+ Add debt</button></p>
+<div class="grid"><div><label for="extra">Extra per month</label><input id="extra" type="number" step="1" value="100"></div></div></div>
+<div class="card">
+ <div class="row"><span></span><b>Snowball</b><b>Avalanche</b></div>
+ <div class="row"><span>Debt-free in</span><span id="t1"></span><span id="t2"></span></div>
+ <div class="row"><span>Total interest</span><span id="i1"></span><span id="i2"></span></div>
+ <p id="msg" class="note"></p>
+ <p><b>Snowball payoff order:</b> <span id="o1"></span><br><b>Avalanche payoff order:</b> <span id="o2"></span></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">Track every payment until you are debt-free</h2>
+  <p>The Debt Payoff Planner spreadsheet does snowball or avalanche automatically, with a payoff chart and progress tracker. Google Sheets and Excel.</p>
+  <p><a class="pill" href="https://www.etsy.com/listing/4616269067?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=debt">See it on Etsy</a> <a class="ghost" href="https://digitallab8.gumroad.com/l/debt-payoff-planner?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=debt">Also on Gumroad</a></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>What is the debt snowball method?</summary><p>Pay minimums on every debt and put every extra dollar on the smallest balance. When it is paid off, roll its payment into the next smallest.</p></details><details><summary>What is the debt avalanche method?</summary><p>Same idea, but the extra goes to the debt with the highest interest rate first. It usually costs less interest.</p></details><details><summary>Which is better, snowball or avalanche?</summary><p>Avalanche is cheaper on paper. Snowball gives faster wins, which helps many people stick with the plan. The calculator shows the difference for your debts.</p></details><details><summary>Does the calculator keep my data?</summary><p>No. Everything runs in your browser and nothing is sent or saved.</p></details>
+</div>
+<div class="card tools"><b>More free tools:</b><br><a href="/budget-calculator/">50/30/20 Budget Calculator</a> <a href="/sinking-funds-calculator/">Sinking Funds Calculator</a> <a href="/wedding-budget-calculator/">Wedding Budget Calculator</a> <a href="/self-employed-tax-calculator/">Self-Employed Tax Calculator</a> <a href="/calculator/">Etsy Fee Calculator</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial or tax advice. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const money=v=>(isFinite(v)?v:0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const start=[['Credit card',6000,24.9,150],['Car loan',9000,6.9,250],['Store card',900,29.9,40],['Medical bill',1500,0,50]];
+function addRow(d){const tr=document.createElement('tr');tr.innerHTML='<td><input value="'+d[0]+'"></td><td><input type="number" value="'+d[1]+'"></td><td><input type="number" step="0.1" value="'+d[2]+'"></td><td><input type="number" value="'+d[3]+'"></td>';$('tbl').appendChild(tr);tr.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));}
+start.forEach(addRow);$('add').onclick=()=>{addRow(['New debt',0,0,0]);};
+function read(){return [...$('tbl').querySelectorAll('tr')].slice(1).map(r=>{const v=[...r.querySelectorAll('input')].map(i=>i.value);return {n:v[0],b:+v[1]||0,r:(+v[2]||0)/1200,m:+v[3]||0}}).filter(d=>d.b>0);}
+function sim(debts,key){let ds=debts.map(d=>({...d})),budget=ds.reduce((a,d)=>a+d.m,0)+(+$('extra').value||0),months=0,interest=0,order=[];
+ ds.sort(key);
+ while(ds.some(d=>d.b>0.005)&&months<1200){months++;ds.forEach(d=>{if(d.b>0){const i=d.b*d.r;d.b+=i;interest+=i;}});
+  let left=budget;ds.forEach(d=>{if(d.b>0){const p=Math.min(d.m,d.b);d.b-=p;left-=p;}});
+  for(const d of ds){if(left<=0)break;if(d.b>0){const p=Math.min(left,d.b);d.b-=p;left-=p;}}
+  ds.forEach(d=>{if(d.b<=0.005&&!d.done){d.done=1;order.push(d.n+' (month '+months+')');}});}
+ return {months,interest,order,ok:months<1200};}
+function fmt(m){const y=Math.floor(m/12),r=m%12;const d=new Date();d.setMonth(d.getMonth()+m);return (y?y+' yr ':'')+r+' mo<br><small>'+d.toLocaleDateString(undefined,{month:'short',year:'numeric'})+'</small>';}
+function calc(){const d=read();if(!d.length){return;}
+ const a=sim(d,(x,y)=>x.b-y.b),b=sim(d,(x,y)=>y.r-x.r);
+ if(!a.ok||!b.ok){$('msg').textContent='Your payments do not cover the interest. Raise the minimums or the extra payment.';return;}
+ $('msg').textContent=a.interest>b.interest+1?'Avalanche saves '+money(a.interest-b.interest)+' in interest. Snowball clears your first debt sooner, which keeps many people motivated.':'Both methods cost about the same here, so the snowball\'s quick wins are a free bonus.';
+ $('t1').innerHTML=fmt(a.months);$('t2').innerHTML=fmt(b.months);$('i1').textContent=money(a.interest);$('i2').textContent=money(b.interest);
+ $('o1').textContent=a.order.join(' → ');$('o2').textContent=b.order.join(' → ');}
+$('extra').addEventListener('input',calc);calc();
+</script>
+</body>
+</html>

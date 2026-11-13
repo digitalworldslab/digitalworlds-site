@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>50/30/20 Budget Calculator – Free, Monthly or Yearly</title>
+<meta name="description" content="Free 50/30/20 budget calculator. Enter your take-home pay and see how much goes to needs, wants and savings or debt, then compare with what you spend now.">
+<link rel="canonical" href="https://digitalworlds.cc/budget-calculator/">
+<meta property="og:title" content="50/30/20 Budget Calculator – Free, Monthly or Yearly">
+<meta property="og:description" content="Free 50/30/20 budget calculator. Enter your take-home pay and see how much goes to needs, wants and savings or debt, then compare with what you spend now.">
+<meta property="og:url" content="https://digitalworlds.cc/budget-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "50/30/20 Budget Calculator", "url": "https://digitalworlds.cc/budget-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the 50/30/20 rule?", "acceptedAnswer": {"@type": "Answer", "text": "Split your after-tax income: 50% for needs (housing, utilities, groceries, minimum debt payments), 30% for wants and 20% for savings and extra debt payoff."}}, {"@type": "Question", "name": "Should I use gross or take-home pay?", "acceptedAnswer": {"@type": "Answer", "text": "Use take-home pay, the amount that reaches your bank account after tax and deductions."}}, {"@type": "Question", "name": "What if my needs are more than 50%?", "acceptedAnswer": {"@type": "Answer", "text": "That is common with high rent. Cut wants first, then shrink the savings share for a while rather than skipping it."}}, {"@type": "Question", "name": "How do I convert biweekly pay to monthly?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply by 26 and divide by 12, about 2.17 times one paycheck. The calculator does this for you."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>50/30/20 Budget Calculator</h1>
+<p class="sub">Type your take-home pay. See your needs, wants and savings targets, and how your real spending compares.</p>
+<div class="card grid">
+ <div><label for="inc">Take-home pay</label><input id="inc" type="number" step="1" value="3500"></div>
+ <div><label for="per">Pay is per</label><select id="per"><option value="1">Month</option><option value="2.1667">2 weeks (biweekly)</option><option value="4.3333">Week</option><option value="0.08333">Year</option></select></div>
+ <div><label for="nd">You spend on needs now (optional)</label><input id="nd" type="number" step="1" placeholder="rent, bills, food"></div>
+ <div><label for="wt">You spend on wants now (optional)</label><input id="wt" type="number" step="1" placeholder="eating out, fun"></div>
+</div>
+<div class="card">
+ <div class="row"><span>Monthly take-home</span><b id="m"></b></div>
+ <div class="row"><span>Needs (50%)</span><span><b id="n"></b> <small id="nn"></small></span></div>
+ <div class="row"><span>Wants (30%)</span><span><b id="w"></b> <small id="ww"></small></span></div>
+ <div class="row"><span>Savings &amp; extra debt payments (20%)</span><b id="s"></b></div>
+ <p>Left for savings at your current spending: <span class="big" id="left"></span> <small id="lp"></small></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">Budget every month, not just once</h2>
+  <p>The 2027 Budget Planner spreadsheet tracks income, bills and spending by month with automatic totals. Works in Google Sheets and Excel.</p>
+  <p><a class="pill" href="https://www.etsy.com/listing/4616269899?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=budget">See it on Etsy</a> <a class="ghost" href="https://digitallab8.gumroad.com/l/budget-planner-2027?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=budget">Also on Gumroad</a></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>What is the 50/30/20 rule?</summary><p>Split your after-tax income: 50% for needs (housing, utilities, groceries, minimum debt payments), 30% for wants and 20% for savings and extra debt payoff.</p></details><details><summary>Should I use gross or take-home pay?</summary><p>Use take-home pay, the amount that reaches your bank account after tax and deductions.</p></details><details><summary>What if my needs are more than 50%?</summary><p>That is common with high rent. Cut wants first, then shrink the savings share for a while rather than skipping it.</p></details><details><summary>How do I convert biweekly pay to monthly?</summary><p>Multiply by 26 and divide by 12, about 2.17 times one paycheck. The calculator does this for you.</p></details>
+</div>
+<div class="card tools"><b>More free tools:</b><br><a href="/debt-snowball-calculator/">Debt Snowball Calculator</a> <a href="/sinking-funds-calculator/">Sinking Funds Calculator</a> <a href="/wedding-budget-calculator/">Wedding Budget Calculator</a> <a href="/self-employed-tax-calculator/">Self-Employed Tax Calculator</a> <a href="/calculator/">Etsy Fee Calculator</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial or tax advice. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const money=v=>(isFinite(v)?v:0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+function calc(){const m=(+$('inc').value||0)*(+$('per').value);$('m').textContent=money(m);
+$('n').textContent=money(m*.5);$('w').textContent=money(m*.3);$('s').textContent=money(m*.2);
+const nd=$('nd').value===''?null:+$('nd').value, wt=$('wt').value===''?null:+$('wt').value;
+$('nn').textContent=nd==null?'':(nd>m*.5?'you spend '+money(nd-m*.5)+' over':'you are '+money(m*.5-nd)+' under');
+$('ww').textContent=wt==null?'':(wt>m*.3?'you spend '+money(wt-m*.3)+' over':'you are '+money(m*.3-wt)+' under');
+if(nd==null&&wt==null){$('left').textContent=money(m*.2);$('lp').textContent='(the 20% target)';}
+else{const l=m-(nd||0)-(wt||0);$('left').textContent=money(l);$('lp').textContent=m?'('+Math.round(l/m*100)+'% of take-home)':'';}}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body>
+</html>

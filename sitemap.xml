@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://digitalworlds.cc/</loc><lastmod>2026-11-11</lastmod></url>
-<url><loc>https://digitalworlds.cc/calculator/</loc><lastmod>2026-11-11</lastmod></url>
+<url><loc>https://digitalworlds.cc/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/calculator/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/budget-calculator/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/debt-snowball-calculator/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/sinking-funds-calculator/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/wedding-budget-calculator/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://digitalworlds.cc/self-employed-tax-calculator/</loc><lastmod>2026-11-13</lastmod></url>
 </urlset>

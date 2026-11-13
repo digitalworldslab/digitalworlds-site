@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Self-Employed Tax Calculator – How Much to Set Aside (US, 1099)</title>
+<meta name="description" content="Free self-employed tax calculator for US freelancers and 1099 workers. Estimate self-employment tax, income tax set-aside and quarterly estimated payments from your profit.">
+<link rel="canonical" href="https://digitalworlds.cc/self-employed-tax-calculator/">
+<meta property="og:title" content="Self-Employed Tax Calculator – How Much to Set Aside (US, 1099)">
+<meta property="og:description" content="Free self-employed tax calculator for US freelancers and 1099 workers. Estimate self-employment tax, income tax set-aside and quarterly estimated payments from your profit.">
+<meta property="og:url" content="https://digitalworlds.cc/self-employed-tax-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Self-Employed Tax Set-Aside Calculator", "url": "https://digitalworlds.cc/self-employed-tax-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I set aside for taxes when self-employed?", "acceptedAnswer": {"@type": "Answer", "text": "Many freelancers set aside 25–30% of profit. Self-employment tax alone is about 14.1% of profit (15.3% on 92.35%), plus federal and state income tax."}}, {"@type": "Question", "name": "What is self-employment tax?", "acceptedAnswer": {"@type": "Answer", "text": "Social Security (12.4%) and Medicare (2.9%) that an employer would normally split with you. When you are self-employed you pay both halves, on 92.35% of net profit."}}, {"@type": "Question", "name": "Do I need to pay quarterly estimated taxes?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes, if you expect to owe $1,000 or more for the year. Payments are due around mid-April, mid-June, mid-September and mid-January."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a planning estimate to help you save enough. Your actual tax depends on deductions, credits and your state."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Self-Employed Tax Set-Aside Calculator</h1>
+<p class="sub">For US freelancers, 1099 contractors and small sellers. Estimate how much of your profit to set aside and your quarterly payments.</p>
+<div class="card grid">
+ <div><label for="inc">Business income for the year</label><input id="inc" type="number" step="100" value="40000"></div>
+ <div><label for="exp">Business expenses</label><input id="exp" type="number" step="100" value="6000"></div>
+ <div><label for="rate">Your income tax rate (federal + state) %</label><input id="rate" type="number" step="0.5" value="15"></div>
+ <div><label for="w2">W-2 wages this year (if any)</label><input id="w2" type="number" step="100" value="0"></div>
+</div>
+<div class="card">
+ <div class="row"><span>Net profit</span><b id="np"></b></div>
+ <div class="row"><span>Self-employment tax (15.3% on 92.35% of profit)</span><b id="se"></b></div>
+ <div class="row"><span>Income tax estimate (after half SE tax deduction)</span><b id="it"></b></div>
+ <p>Set aside for the year: <span class="big" id="tot"></span> <small id="pct"></small></p>
+ <p>Quarterly estimated payment: <b id="q"></b> <small>(due around mid-April, mid-June, mid-September and mid-January)</small></p>
+ <p class="note">Uses the 2026 Social Security wage base of $184,500 for the 12.4% part; Medicare 2.9% has no cap. Ignores the 0.9% additional Medicare tax, the QBI deduction and credits. A rough estimate to plan savings, not tax advice. Check IRS Form 1040-ES or a tax professional.</p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">Track income, expenses and tax set-aside all year</h2>
+  <p>The Self-Employed Income &amp; Tax Tracker spreadsheet logs every payment and expense, totals by category and shows your quarterly set-aside. Google Sheets and Excel.</p>
+  <p><a class="pill" href="https://www.etsy.com/listing/4616281940?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=selfemp">See it on Etsy</a> <a class="ghost" href="https://digitallab8.gumroad.com/l/self-employed-tax-tracker-2027?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=selfemp">Also on Gumroad</a></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>How much should I set aside for taxes when self-employed?</summary><p>Many freelancers set aside 25–30% of profit. Self-employment tax alone is about 14.1% of profit (15.3% on 92.35%), plus federal and state income tax.</p></details><details><summary>What is self-employment tax?</summary><p>Social Security (12.4%) and Medicare (2.9%) that an employer would normally split with you. When you are self-employed you pay both halves, on 92.35% of net profit.</p></details><details><summary>Do I need to pay quarterly estimated taxes?</summary><p>Usually yes, if you expect to owe $1,000 or more for the year. Payments are due around mid-April, mid-June, mid-September and mid-January.</p></details><details><summary>Is this tax advice?</summary><p>No. It is a planning estimate to help you save enough. Your actual tax depends on deductions, credits and your state.</p></details>
+</div>
+<div class="card tools"><b>More free tools:</b><br><a href="/budget-calculator/">50/30/20 Budget Calculator</a> <a href="/debt-snowball-calculator/">Debt Snowball Calculator</a> <a href="/sinking-funds-calculator/">Sinking Funds Calculator</a> <a href="/wedding-budget-calculator/">Wedding Budget Calculator</a> <a href="/calculator/">Etsy Fee Calculator</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial or tax advice. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const money=v=>(isFinite(v)?v:0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+function calc(){const np=Math.max(0,(+$('inc').value||0)-(+$('exp').value||0)),base=np*0.9235,w2=+$('w2').value||0;
+ const ss=Math.max(0,Math.min(base,184500-w2))*0.124,med=base*0.029,se=ss+med,it=Math.max(0,np-se/2)*(+$('rate').value||0)/100,t=se+it;
+ $('np').textContent=money(np);$('se').textContent=money(se);$('it').textContent=money(it);$('tot').textContent=money(t);
+ $('pct').textContent=np?'('+Math.round(t/np*100)+'% of profit)':'';$('q').textContent=money(t/4);}
+document.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body>
+</html>

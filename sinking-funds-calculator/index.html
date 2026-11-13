@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sinking Funds Calculator – How Much to Save Each Month</title>
+<meta name="description" content="Free sinking funds calculator. List what you are saving for (Christmas, car repairs, vacation, insurance), the amount and the date, and see exactly how much to save each month or paycheck.">
+<link rel="canonical" href="https://digitalworlds.cc/sinking-funds-calculator/">
+<meta property="og:title" content="Sinking Funds Calculator – How Much to Save Each Month">
+<meta property="og:description" content="Free sinking funds calculator. List what you are saving for (Christmas, car repairs, vacation, insurance), the amount and the date, and see exactly how much to save each month or paycheck.">
+<meta property="og:url" content="https://digitalworlds.cc/sinking-funds-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sinking Funds Calculator", "url": "https://digitalworlds.cc/sinking-funds-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a sinking fund?", "acceptedAnswer": {"@type": "Answer", "text": "Money you set aside a little at a time for a known future expense, such as Christmas, car repairs or an annual insurance bill, so it never hits your budget all at once."}}, {"@type": "Question", "name": "How do I calculate a sinking fund?", "acceptedAnswer": {"@type": "Answer", "text": "Take the amount you still need, divide it by the number of months until you need it. That is your monthly contribution."}}, {"@type": "Question", "name": "What sinking funds should I have?", "acceptedAnswer": {"@type": "Answer", "text": "Common ones: Christmas and gifts, car maintenance, car insurance, medical, home repairs, vacation, back to school, pet care and annual subscriptions."}}, {"@type": "Question", "name": "Sinking fund vs emergency fund?", "acceptedAnswer": {"@type": "Answer", "text": "An emergency fund is for surprises. A sinking fund is for expenses you know are coming."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Sinking Funds Calculator</h1>
+<p class="sub">List what you are saving for, how much and by when. See exactly what to set aside each month and each paycheck.</p>
+<div class="card scroll"><table class="debt" id="tbl"><tr><th>Saving for</th><th>Goal</th><th>Saved so far</th><th>Needed by</th><th>Per month</th></tr></table>
+<p><button class="ghost" id="add" type="button">+ Add fund</button></p>
+<div class="grid"><div><label for="pay">Paychecks per month</label><select id="pay"><option value="1">1 (monthly)</option><option value="2">2 (twice a month)</option><option value="2.1667" selected>Biweekly (26 a year)</option><option value="4.3333">Weekly</option></select></div></div></div>
+<div class="card"><p>Save each month: <span class="big" id="tm"></span></p><p>Per paycheck: <b id="tp"></b></p><p class="note" id="msg"></p></div>
+<div class="card">
+  <h2 style="margin-top:0">Track all your sinking funds in one sheet</h2>
+  <p>The Sinking Funds Tracker spreadsheet shows every fund's goal, progress bar and monthly target. Google Sheets and Excel.</p>
+  <p><a class="pill" href="https://www.etsy.com/listing/4616270353?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=sinking">See it on Etsy</a> <a class="ghost" href="https://digitallab8.gumroad.com/l/sinking-funds-tracker?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=sinking">Also on Gumroad</a></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>What is a sinking fund?</summary><p>Money you set aside a little at a time for a known future expense, such as Christmas, car repairs or an annual insurance bill, so it never hits your budget all at once.</p></details><details><summary>How do I calculate a sinking fund?</summary><p>Take the amount you still need, divide it by the number of months until you need it. That is your monthly contribution.</p></details><details><summary>What sinking funds should I have?</summary><p>Common ones: Christmas and gifts, car maintenance, car insurance, medical, home repairs, vacation, back to school, pet care and annual subscriptions.</p></details><details><summary>Sinking fund vs emergency fund?</summary><p>An emergency fund is for surprises. A sinking fund is for expenses you know are coming.</p></details>
+</div>
+<div class="card tools"><b>More free tools:</b><br><a href="/budget-calculator/">50/30/20 Budget Calculator</a> <a href="/debt-snowball-calculator/">Debt Snowball Calculator</a> <a href="/wedding-budget-calculator/">Wedding Budget Calculator</a> <a href="/self-employed-tax-calculator/">Self-Employed Tax Calculator</a> <a href="/calculator/">Etsy Fee Calculator</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial or tax advice. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const money=v=>(isFinite(v)?v:0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+function iso(m){const d=new Date();d.setMonth(d.getMonth()+m);return d.toISOString().slice(0,10);}
+const start=[['Christmas & gifts',800,100,iso(12)],['Car repairs',1200,0,iso(12)],['Vacation',2000,300,iso(8)],['Car insurance',900,0,iso(6)]];
+function addRow(d){const tr=document.createElement('tr');tr.innerHTML='<td><input value="'+d[0]+'"></td><td><input type="number" value="'+d[1]+'"></td><td><input type="number" value="'+d[2]+'"></td><td><input type="date" value="'+d[3]+'"></td><td class="pm"></td>';$('tbl').appendChild(tr);tr.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));}
+start.forEach(addRow);$('add').onclick=()=>{addRow(['New fund',0,0,iso(12)]);calc();};
+function calc(){let tot=0,late=0;const now=new Date();
+ [...$('tbl').querySelectorAll('tr')].slice(1).forEach(r=>{const v=[...r.querySelectorAll('input')].map(i=>i.value);const need=Math.max(0,(+v[1]||0)-(+v[2]||0));const due=new Date(v[3]);
+  let m=(due.getFullYear()-now.getFullYear())*12+(due.getMonth()-now.getMonth());if(due.getDate()<now.getDate())m-=1;if(!(m>=1)){m=1;if(need>0)late++;}
+  const pm=need/m;tot+=pm;r.querySelector('.pm').textContent=money(pm);});
+ $('tm').textContent=money(tot);$('tp').textContent=money(tot/(+$('pay').value));
+ $('msg').textContent=late?late+' fund(s) are due within a month, so the full remaining amount is counted now.':'';}
+$('pay').addEventListener('input',calc);calc();
+</script>
+</body>
+</html>

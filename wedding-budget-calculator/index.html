@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Budget Calculator – Breakdown by Category</title>
+<meta name="description" content="Free wedding budget calculator. Enter your total budget and guest count to see a typical breakdown by category (venue, catering, photography, attire, flowers and more) and your cost per guest.">
+<link rel="canonical" href="https://digitalworlds.cc/wedding-budget-calculator/">
+<meta property="og:title" content="Wedding Budget Calculator – Breakdown by Category">
+<meta property="og:description" content="Free wedding budget calculator. Enter your total budget and guest count to see a typical breakdown by category (venue, catering, photography, attire, flowers and more) and your cost per guest.">
+<meta property="og:url" content="https://digitalworlds.cc/wedding-budget-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wedding Budget Calculator", "url": "https://digitalworlds.cc/wedding-budget-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How should I split my wedding budget?", "acceptedAnswer": {"@type": "Answer", "text": "A common starting point is 40–50% for venue, food and drinks, 10–12% for photo and video, around 8–10% each for attire and flowers, and about 10% kept back for surprises. Adjust to what matters most to you."}}, {"@type": "Question", "name": "How do I lower the cost per guest?", "acceptedAnswer": {"@type": "Answer", "text": "Guest count drives most costs because food, drinks, chairs and invitations scale with it. Cutting 10 guests often saves more than any single vendor discount."}}, {"@type": "Question", "name": "Should I keep a buffer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most couples go over budget somewhere. Keeping 5–10% aside avoids stress near the date."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Wedding Budget Calculator</h1>
+<p class="sub">Enter your total budget and guest count. See a typical split by category and what each guest costs. Change any percentage to fit your plans.</p>
+<div class="card grid"><div><label for="tot">Total wedding budget</label><input id="tot" type="number" step="100" value="20000"></div>
+<div><label for="g">Number of guests</label><input id="g" type="number" value="80"></div></div>
+<div class="card scroll"><table id="tbl"><tr><th>Category</th><th>%</th><th>Amount</th></tr></table>
+<div class="row"><b>Total</b><b id="pt"></b><b id="at"></b></div><p>Cost per guest: <span class="big" id="pg"></span> <small>(food &amp; drinks per guest: <span id="fg"></span>)</small></p></div>
+<div class="card">
+  <h2 style="margin-top:0">Plan the whole wedding in one spreadsheet</h2>
+  <p>The Wedding Planner &amp; Budget spreadsheet tracks budget vs actual, vendors, payments due, guest list and RSVPs. Google Sheets and Excel.</p>
+  <p><a class="pill" href="https://www.etsy.com/listing/4616282376?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=wedding">See it on Etsy</a> <a class="ghost" href="https://digitallab8.gumroad.com/l/wedding-planner-budget?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=wedding">Also on Gumroad</a></p>
+</div>
+<div class="card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <details><summary>How should I split my wedding budget?</summary><p>A common starting point is 40–50% for venue, food and drinks, 10–12% for photo and video, around 8–10% each for attire and flowers, and about 10% kept back for surprises. Adjust to what matters most to you.</p></details><details><summary>How do I lower the cost per guest?</summary><p>Guest count drives most costs because food, drinks, chairs and invitations scale with it. Cutting 10 guests often saves more than any single vendor discount.</p></details><details><summary>Should I keep a buffer?</summary><p>Yes. Most couples go over budget somewhere. Keeping 5–10% aside avoids stress near the date.</p></details>
+</div>
+<div class="card tools"><b>More free tools:</b><br><a href="/budget-calculator/">50/30/20 Budget Calculator</a> <a href="/debt-snowball-calculator/">Debt Snowball Calculator</a> <a href="/sinking-funds-calculator/">Sinking Funds Calculator</a> <a href="/self-employed-tax-calculator/">Self-Employed Tax Calculator</a> <a href="/calculator/">Etsy Fee Calculator</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial or tax advice. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const money=v=>(isFinite(v)?v:0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const cats=[["Venue, food &amp; drinks", 45], ["Photo &amp; video", 12], ["Attire, hair &amp; makeup", 9], ["Flowers &amp; decor", 9], ["Music &amp; entertainment", 6], ["Rings", 3], ["Stationery &amp; invitations", 2], ["Transport", 2], ["Favors &amp; gifts", 2], ["Officiant, licence &amp; fees", 1], ["Buffer for surprises", 9]];
+cats.forEach(c=>{const tr=document.createElement('tr');tr.innerHTML='<td>'+c[0]+'</td><td style="width:90px"><input type="number" value="'+c[1]+'"></td><td class="am"></td>';$('tbl').appendChild(tr);tr.querySelector('input').addEventListener('input',calc);});
+function calc(){const t=+$('tot').value||0,g=+$('g').value||0;let p=0,first=0;
+ [...$('tbl').querySelectorAll('tr')].slice(1).forEach((r,i)=>{const v=+r.querySelector('input').value||0;p+=v;r.querySelector('.am').textContent=money(t*v/100);if(i==0)first=t*v/100;});
+ $('pt').textContent=p+'%'+(Math.round(p)!==100?' (should be 100)':'');$('at').textContent=money(t*p/100);
+ $('pg').textContent=g?money(t/g):'-';$('fg').textContent=g?money(first/g):'-';}
+['tot','g'].forEach(i=>$(i).addEventListener('input',calc));calc();
+</script>
+</body>
+</html>
