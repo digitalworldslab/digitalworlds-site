@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://digitalworlds.cc/</loc><lastmod>2026-11-13</lastmod></url>
 <url><loc>https://digitalworlds.cc/calculator/</loc><lastmod>2026-11-13</lastmod></url>
@@ -29,4 +29,9 @@
 <url><loc>https://digitalworlds.cc/templates/wedding/</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://digitalworlds.cc/templates/weddingbudget/</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://digitalworlds.cc/templates/zerobased/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://digitalworlds.cc/guides/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://digitalworlds.cc/guides/debt-snowball-vs-avalanche/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://digitalworlds.cc/guides/50-30-20-budget-example/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://digitalworlds.cc/guides/sinking-funds-list/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://digitalworlds.cc/guides/self-employed-tax-set-aside/</loc><lastmod>2026-11-18</lastmod></url>
 </urlset>
