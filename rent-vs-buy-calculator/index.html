@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rent vs Buy Calculator: Is Renting Cheaper Than Owning?</title>
+<meta name="description" content="Free rent vs buy calculator. Compare your rent with the true yearly cost of owning: mortgage interest, property tax, maintenance and the lost return on your deposit. Find your break-even rent.">
+<link rel="canonical" href="https://digitalworlds.cc/rent-vs-buy-calculator/">
+<meta property="og:title" content="Rent vs Buy Calculator: Is Renting Cheaper Than Owning?">
+<meta property="og:description" content="Free rent vs buy calculator. Compare your rent with the true yearly cost of owning: mortgage interest, property tax, maintenance and the lost return on your deposit. Find your break-even rent.">
+<meta property="og:url" content="https://digitalworlds.cc/rent-vs-buy-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Rent vs Buy Calculator", "url": "https://digitalworlds.cc/rent-vs-buy-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the unrecoverable cost of owning?", "acceptedAnswer": {"@type": "Answer", "text": "Money you pay as an owner and never get back: mortgage interest, property tax, insurance, maintenance and the return your deposit could have earned elsewhere. Mortgage principal is not counted, because it builds equity."}}, {"@type": "Question", "name": "Is there a quick rule of thumb?", "acceptedAnswer": {"@type": "Answer", "text": "Add up those costs as a percentage of the home price, often around 4 to 6% a year. Multiply the price by that percentage and divide by 12: if your rent is lower, renting is usually cheaper. This calculator uses your own numbers instead of a fixed percentage."}}, {"@type": "Question", "name": "What does this leave out?", "acceptedAnswer": {"@type": "Answer", "text": "Price growth, buying and selling fees, tax rules and how long you will stay. Buying usually makes more sense the longer you stay put."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Rent vs Buy Calculator</h1>
+<p class="sub">Owning costs more than the mortgage interest. Compare rent with the money you never get back when you own.</p>
+<div class="card grid"><div><label for="price">Home price</label><input id="price" type="number" step="any" value="300000"></div><div><label for="dpp">Deposit, % of price</label><input id="dpp" type="number" step="any" value="20"></div><div><label for="rate">Mortgage rate % per year</label><input id="rate" type="number" step="any" value="4.5"></div><div><label for="tax">Property tax + insurance, % per year</label><input id="tax" type="number" step="any" value="0.8"></div><div><label for="maint">Maintenance, % of price per year</label><input id="maint" type="number" step="any" value="1"></div><div><label for="ret">Return you could earn on the deposit, % per year</label><input id="ret" type="number" step="any" value="5"></div><div><label for="rent">Your monthly rent for a similar home</label><input id="rent" type="number" step="any" value="1100"></div></div>
+<div class="card"><div class="row"><span>Mortgage interest, first year</span><b id="int"></b></div><div class="row"><span>Property tax + insurance per year</span><b id="tx"></b></div><div class="row"><span>Maintenance per year</span><b id="mt"></b></div><div class="row"><span>Lost return on the deposit per year</span><b id="opp"></b></div><div class="row"><span>Unrecoverable cost of owning per year</span><b id="own"></b></div><div class="row"><span>As % of the home price</span><b id="pct"></b></div><div class="row"><span>Break-even monthly rent</span><b id="be"></b></div><div class="row"><span>Your rent per year</span><b id="yrent"></b></div><p id="verdict" class="big" style="font-size:20px"></p></div>
+<div class="card"><h2 style="margin-top:0">Plan the move either way</h2><p>Renting your first place? The First Apartment Budget spreadsheet totals deposit, move-in costs and the new monthly budget. Building wealth? The Net Worth Tracker shows whether you are actually getting richer each month.</p><p><a class="pill" href="https://www.etsy.com/listing/4620114761?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=rentbuy">First Apartment Budget on Etsy</a> <a class="ghost" href="https://www.etsy.com/listing/4618132524?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=rentbuy">Net Worth Tracker</a></p></div>
+<div class="card"><h2 style="margin-top:0">FAQ</h2><details><summary>What is the unrecoverable cost of owning?</summary><p>Money you pay as an owner and never get back: mortgage interest, property tax, insurance, maintenance and the return your deposit could have earned elsewhere. Mortgage principal is not counted, because it builds equity.</p></details><details><summary>Is there a quick rule of thumb?</summary><p>Add up those costs as a percentage of the home price, often around 4 to 6% a year. Multiply the price by that percentage and divide by 12: if your rent is lower, renting is usually cheaper. This calculator uses your own numbers instead of a fixed percentage.</p></details><details><summary>What does this leave out?</summary><p>Price growth, buying and selling fees, tax rules and how long you will stay. Buying usually makes more sense the longer you stay put.</p></details></div>
+<div class="card tools"><b>More free tools:</b><br><a href="/house-affordability-calculator/">House Affordability</a> <a href="/rent-vs-buy-calculator/">Rent vs Buy</a> <a href="/car-affordability-calculator/">Car Affordability (20/4/10)</a> <a href="/budget-calculator/">50/30/20 Budget</a> <a href="/debt-snowball-calculator/">Debt Snowball</a> <a href="/sinking-funds-calculator/">Sinking Funds</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial advice. Rules of thumb are starting points; your lender, taxes and local costs decide the real numbers. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);const v=id=>+$(id).value||0;const money=x=>(isFinite(x)?x:0).toLocaleString(undefined,{maximumFractionDigits:0});function pmt(L,r,n){r=r/1200;return r?L*r/(1-Math.pow(1+r,-n)):L/n}function principal(P,r,n){r=r/1200;return r?P*(1-Math.pow(1+r,-n))/r:P*n}
+function calc(){const p=v('price'),dp=p*v('dpp')/100,L=p-dp,i=L*v('rate')/100,tx=p*v('tax')/100,mt=p*v('maint')/100,op=dp*v('ret')/100,own=i+tx+mt+op,rent=v('rent')*12;
+$('int').textContent=money(i);$('tx').textContent=money(tx);$('mt').textContent=money(mt);$('opp').textContent=money(op);$('own').textContent=money(own);
+$('pct').textContent=(p?own/p*100:0).toFixed(1)+'%';$('be').textContent=money(own/12);$('yrent').textContent=money(rent);
+$('verdict').textContent=rent<own?'Renting is cheaper by about '+money(own-rent)+' a year.':'Owning is cheaper by about '+money(rent-own)+' a year.';}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body>
+</html>

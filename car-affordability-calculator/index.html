@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Much Car Can I Afford? 20/4/10 Rule Calculator</title>
+<meta name="description" content="Free car affordability calculator using the 20/4/10 rule: 20% down, a loan of 4 years or less, and total car costs under 10% of gross income. Check a car price or find your maximum.">
+<link rel="canonical" href="https://digitalworlds.cc/car-affordability-calculator/">
+<meta property="og:title" content="How Much Car Can I Afford? 20/4/10 Rule Calculator">
+<meta property="og:description" content="Free car affordability calculator using the 20/4/10 rule: 20% down, a loan of 4 years or less, and total car costs under 10% of gross income. Check a car price or find your maximum.">
+<meta property="og:url" content="https://digitalworlds.cc/car-affordability-calculator/">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#1d1433;--card:#2a1f47;--ink:#fff;--muted:#c9bfe6;--accent:#f5b84a;--line:#3d2f63}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;margin:8px 0 6px}h2{font-size:21px}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#160f28;color:var(--ink);font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;border-bottom:1px dashed var(--line);text-align:left}th{color:var(--muted);font-weight:600;font-size:13px}
+.debt input{padding:8px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.big{font-size:28px;font-weight:700;color:var(--accent)}
+.pill{display:inline-block;background:var(--accent);color:#1d1433;font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.ghost{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;margin:4px 6px 4px 0}
+small,.note{color:var(--muted);font-size:13px}a{color:var(--accent)}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+.tools a{display:inline-block;margin:4px 10px 4px 0}
+.scroll{overflow-x:auto}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Car Affordability Calculator (20/4/10)", "url": "https://digitalworlds.cc/car-affordability-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Digital Worlds Lab", "url": "https://digitalworlds.cc/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the 20/4/10 rule?", "acceptedAnswer": {"@type": "Answer", "text": "Put at least 20% down, finance for no more than 4 years, and keep total car costs (loan payment, insurance, fuel and upkeep) under 10% of your gross monthly income."}}, {"@type": "Question", "name": "Is 20/4/10 strict?", "acceptedAnswer": {"@type": "Answer", "text": "It is a conservative rule of thumb. Some people allow up to 15% of income, but staying near 10% leaves more room for savings and other goals."}}, {"@type": "Question", "name": "What about leasing?", "acceptedAnswer": {"@type": "Answer", "text": "The same 10% test works for a lease: add the lease payment, insurance and running costs and compare them with 10% of gross income."}}]}</script>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px"><a href="/" style="color:var(--muted);text-decoration:none;font-size:14px">&larr; Digital Worlds Lab · free money tools</a></p>
+<h1>Car Affordability Calculator (20/4/10)</h1>
+<p class="sub">20% down, 4 years or less, and car costs under 10% of gross income. Check a car, or see the most you should spend.</p>
+<div class="card grid"><div><label for="inc">Gross monthly income</label><input id="inc" type="number" step="any" value="4500"></div><div><label for="price">Car price you are looking at</label><input id="price" type="number" step="any" value="22000"></div><div><label for="down">Down payment</label><input id="down" type="number" step="any" value="4400"></div><div><label for="rate">Loan rate % per year</label><input id="rate" type="number" step="any" value="6.9"></div><div><label for="mo">Loan term (months)</label><input id="mo" type="number" step="any" value="48"></div><div><label for="run">Insurance + fuel + upkeep per month</label><input id="run" type="number" step="any" value="180"></div></div>
+<div class="card"><div class="row"><span>Loan amount</span><b id="loan"></b></div><div class="row"><span>Monthly loan payment</span><b id="pay"></b></div><div class="row"><span>Total monthly car cost</span><b id="tot"></b></div><div class="row"><span>As % of gross income</span><b id="pctinc"></b></div><div class="row"><span>20% down?</span><b id="r20"></b></div><div class="row"><span>4 years or less?</span><b id="r4"></b></div><div class="row"><span>10% of income or less?</span><b id="r10"></b></div><div class="row"><span>Max car price under 20/4/10</span><b id="max"></b></div><p id="verdict" class="big" style="font-size:20px"></p></div>
+<div class="card"><h2 style="margin-top:0">Fit the car into the whole budget</h2><p>The Paycheck Budget spreadsheet shows what each paycheck has to cover, including the car payment, so you can see the real effect before you sign.</p><p><a class="pill" href="https://www.etsy.com/listing/4618129002?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=car">Paycheck Budget on Etsy</a> <a class="ghost" href="https://www.etsy.com/listing/4616269899?utm_source=digitalworlds&amp;utm_medium=tool&amp;utm_campaign=car">2027 Budget Planner</a></p></div>
+<div class="card"><h2 style="margin-top:0">FAQ</h2><details><summary>What is the 20/4/10 rule?</summary><p>Put at least 20% down, finance for no more than 4 years, and keep total car costs (loan payment, insurance, fuel and upkeep) under 10% of your gross monthly income.</p></details><details><summary>Is 20/4/10 strict?</summary><p>It is a conservative rule of thumb. Some people allow up to 15% of income, but staying near 10% leaves more room for savings and other goals.</p></details><details><summary>What about leasing?</summary><p>The same 10% test works for a lease: add the lease payment, insurance and running costs and compare them with 10% of gross income.</p></details></div>
+<div class="card tools"><b>More free tools:</b><br><a href="/house-affordability-calculator/">House Affordability</a> <a href="/rent-vs-buy-calculator/">Rent vs Buy</a> <a href="/car-affordability-calculator/">Car Affordability (20/4/10)</a> <a href="/budget-calculator/">50/30/20 Budget</a> <a href="/debt-snowball-calculator/">Debt Snowball</a> <a href="/sinking-funds-calculator/">Sinking Funds</a></div>
+<p class="note">Free to use, no sign-up. Estimates only, not financial advice. Rules of thumb are starting points; your lender, taxes and local costs decide the real numbers. Made by Digital Worlds Lab · <a href="mailto:support@digitalworlds.cc">support@digitalworlds.cc</a></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);const v=id=>+$(id).value||0;const money=x=>(isFinite(x)?x:0).toLocaleString(undefined,{maximumFractionDigits:0});function pmt(L,r,n){r=r/1200;return r?L*r/(1-Math.pow(1+r,-n)):L/n}function principal(P,r,n){r=r/1200;return r?P*(1-Math.pow(1+r,-n))/r:P*n}
+function calc(){const inc=v('inc'),p=v('price'),dn=v('down'),r=v('rate'),m=v('mo'),run=v('run');const L=Math.max(0,p-dn),pay=m?pmt(L,r,m):0,tot=pay+run,pc=inc?tot/inc*100:0;
+const ok=b=>b?'Yes':'No';$('loan').textContent=money(L);$('pay').textContent=money(pay);$('tot').textContent=money(tot);$('pctinc').textContent=pc.toFixed(1)+'%';
+$('r20').textContent=ok(p&&dn>=p*.2);$('r4').textContent=ok(m<=48);$('r10').textContent=ok(pc<=10);
+const cap=Math.max(0,inc*.1-run),maxL=principal(cap,r,48),mx=maxL/0.8;$('max').textContent=money(mx);
+$('verdict').textContent=(p&&dn>=p*.2&&m<=48&&pc<=10)?'This car passes 20/4/10.':'Over the rule. Max price under 20/4/10: about '+money(mx)+'.';}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body>
+</html>
