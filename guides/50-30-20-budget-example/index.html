@@ -13,5 +13,21 @@
 <div class="box"><b>Paid every two weeks?</b> Budget per paycheck instead of per month: the same percentages, applied to each payment. See the <a class="cta2" href="/templates/paycheck/">paycheck budget spreadsheet</a>.</div>
 <h2>Try it</h2><p>Type your pay into the <a class="cta2" href="/budget-calculator/">free 50/30/20 calculator</a>. For a whole year with a transactions log and the split worked out for you, see the <a class="cta2" href="/templates/budget/">2027 budget spreadsheet</a>.</p>
 <p><a class="cta" href="https://www.etsy.com/listing/4616269899?utm_source=digitalworlds&utm_medium=guide&utm_campaign=guide_503020">Get the Budget Spreadsheet on Etsy</a></p>
-<p>Prefer one simple page? Try the <a class="cta2" href="/templates/simple/">simple monthly budget</a> or the <a class="cta2" href="/templates/zerobased/">zero-based budget</a>.</p><h2>Questions</h2><h3>What is the 50/30/20 rule?</h3><p>Split your take-home pay: 50% for needs (rent, bills, groceries, minimum debt payments), 30% for wants, and 20% for savings and extra debt payments.</p><h3>Is it based on gross or net income?</h3><p>Use take-home pay, the amount that actually lands in your account after tax.</p><h3>What if my needs are more than 50%?</h3><p>That&#x27;s common where rent is high. Start from your real numbers, keep savings at least small but regular, and trim wants first.</p>
+<p>Prefer one simple page? Try the <a class="cta2" href="/templates/simple/">simple monthly budget</a> or the <a class="cta2" href="/templates/zerobased/">zero-based budget</a>.</p><div id="kitbox" style="border:1px solid #ddd;border-radius:12px;padding:18px;margin:24px 0;background:#faf7f2">
+<h2 style="margin-top:0">Get the 2027 money sheet deals by email</h2>
+<p style="margin-top:0">We'll tell you when our budget, debt and savings spreadsheets are on sale (up to 30% off from 27 November), plus one money tip now and then. Unsubscribe anytime.</p>
+<form id="kitForm2" action="https://app.kit.com/forms/10224605/subscriptions" method="post" target="_blank" style="display:flex;gap:8px;flex-wrap:wrap">
+<label for="kitEmail2" style="position:absolute;left:-9999px">Email address</label>
+<input id="kitEmail2" name="email_address" type="email" required placeholder="you@example.com" autocomplete="email" style="flex:1 1 220px;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:8px">
+<button type="submit" style="border:0;cursor:pointer;font-size:16px;padding:10px 18px;border-radius:999px;background:#1f7a5c;color:#fff">Email me the deals</button>
+</form>
+<p id="kitMsg2" role="status" aria-live="polite" style="margin-bottom:0"></p>
+</div>
+<script>
+document.getElementById('kitForm2').addEventListener('submit',async function(e){e.preventDefault();var f=e.target,b=f.querySelector('button'),m=document.getElementById('kitMsg2');b.disabled=true;
+try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(!r.ok){m.textContent='That didn\'t work. Please check the email address and try again.';b.disabled=false;return}
+f.hidden=true;m.textContent='Almost done: check your inbox and click the confirm button.';}catch(_){f.submit();m.textContent='Almost done: check your inbox and click the confirm button.';}b.disabled=false;});
+</script>
+<h2>Questions</h2><h3>What is the 50/30/20 rule?</h3><p>Split your take-home pay: 50% for needs (rent, bills, groceries, minimum debt payments), 30% for wants, and 20% for savings and extra debt payments.</p><h3>Is it based on gross or net income?</h3><p>Use take-home pay, the amount that actually lands in your account after tax.</p><h3>What if my needs are more than 50%?</h3><p>That&#x27;s common where rent is high. Start from your real numbers, keep savings at least small but regular, and trim wants first.</p>
 <p class="note">Updated 17 November 2026. A planning guide, not financial or tax advice.</p></main></body></html>

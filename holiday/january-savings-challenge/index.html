@@ -20,5 +20,21 @@
 <p><a class="cta" href="https://www.etsy.com/listing/4618119779?utm_source=digitalworlds&utm_medium=holiday_guide&utm_campaign=january-savings-challenge">Get the 2027 Savings Challenge on Etsy</a></p>
 <p>Want a safety net first? The <a class="cta2" href="https://www.etsy.com/listing/4618120917?utm_source=digitalworlds&utm_medium=holiday_guide&utm_campaign=january-savings-challenge">Emergency Fund Tracker</a> shows how many months you could cover without pay.</p>
 <p class="note">General information for planning, not financial advice.</p>
+<div id="kitbox" style="border:1px solid #ddd;border-radius:12px;padding:18px;margin:24px 0;background:#faf7f2">
+<h2 style="margin-top:0">Get the 2027 money sheet deals by email</h2>
+<p style="margin-top:0">We'll tell you when our budget, debt and savings spreadsheets are on sale (up to 30% off from 27 November), plus one money tip now and then. Unsubscribe anytime.</p>
+<form id="kitForm2" action="https://app.kit.com/forms/10224605/subscriptions" method="post" target="_blank" style="display:flex;gap:8px;flex-wrap:wrap">
+<label for="kitEmail2" style="position:absolute;left:-9999px">Email address</label>
+<input id="kitEmail2" name="email_address" type="email" required placeholder="you@example.com" autocomplete="email" style="flex:1 1 220px;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:8px">
+<button type="submit" style="border:0;cursor:pointer;font-size:16px;padding:10px 18px;border-radius:999px;background:#1f7a5c;color:#fff">Email me the deals</button>
+</form>
+<p id="kitMsg2" role="status" aria-live="polite" style="margin-bottom:0"></p>
+</div>
+<script>
+document.getElementById('kitForm2').addEventListener('submit',async function(e){e.preventDefault();var f=e.target,b=f.querySelector('button'),m=document.getElementById('kitMsg2');b.disabled=true;
+try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(!r.ok){m.textContent='That didn\'t work. Please check the email address and try again.';b.disabled=false;return}
+f.hidden=true;m.textContent='Almost done: check your inbox and click the confirm button.';}catch(_){f.submit();m.textContent='Almost done: check your inbox and click the confirm button.';}b.disabled=false;});
+</script>
 <h2>Questions</h2><h3>How does the 52-week challenge work?</h3><p>Week 1 you save 1, week 2 you save 2, and so on up to 52. By the end of the year that adds up to 1,378.</p><h3>Can I do it in reverse?</h3><p>Yes. Starting with 52 and going down makes the hardest weeks come in January, when motivation is highest, and the easy weeks land in December.</p><h3>Where should I keep the money?</h3><p>A separate savings account, ideally one that pays interest and is not linked to your debit card.</p>
 </main></body></html>
