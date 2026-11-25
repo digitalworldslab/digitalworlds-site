@@ -10,6 +10,9 @@ on:
       dry_run:
         description: "1 = print only, post nothing"
         default: "0"
+      only_platform:
+        description: "bluesky or mastodon (empty = both)"
+        default: ""
 
 permissions:
   contents: write
@@ -30,6 +33,7 @@ jobs:
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+          ONLY_PLATFORM: ${{ github.event.inputs.only_platform || '' }}
         run: python3 .social/post.py
       - name: Save state
         run: |
