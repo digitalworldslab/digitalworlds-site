@@ -1,0 +1,14 @@
+name: Bluesky profile update
+on:
+  workflow_dispatch:
+  push:
+    paths: [".social/profile.json"]
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .social/profile.py
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
