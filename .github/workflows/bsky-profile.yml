@@ -1,8 +1,6 @@
 name: Bluesky profile update
 on:
   workflow_dispatch:
-  push:
-    paths: [".social/profile.json"]
 jobs:
   profile:
     runs-on: ubuntu-latest
