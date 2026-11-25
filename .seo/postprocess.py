@@ -53,7 +53,7 @@ CLUSTERS = {
                 "/holiday/christmas-market-pricing/"],
     "home": ["/house-affordability-calculator/", "/rent-vs-buy-calculator/", "/car-affordability-calculator/",
              "/holiday/save-10k-2027/"],
-    "pl": ["/pl/", "/limit-dzialalnosci-nierejestrowanej-2027/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
+    "pl": ["/pl/", "/limit-dzialalnosci-nierejestrowanej-2027/", "/ksef-2027-mala-firma/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
            "/wyzwanie-52-tygodni/", "/klub/", "/arkusz-jdg/", "/ryczalt-czy-liniowy/",
            "/skladka-zdrowotna-jdg/", "/dzialalnosc-nierejestrowana-limit-2026/"],
     "de": ["/de/"],
