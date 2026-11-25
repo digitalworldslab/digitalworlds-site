@@ -53,7 +53,7 @@ CLUSTERS = {
                 "/holiday/christmas-market-pricing/"],
     "home": ["/house-affordability-calculator/", "/rent-vs-buy-calculator/", "/car-affordability-calculator/",
              "/holiday/save-10k-2027/"],
-    "pl": ["/pl/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
+    "pl": ["/pl/", "/limit-dzialalnosci-nierejestrowanej-2027/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
            "/wyzwanie-52-tygodni/", "/klub/", "/arkusz-jdg/", "/ryczalt-czy-liniowy/",
            "/skladka-zdrowotna-jdg/", "/dzialalnosc-nierejestrowana-limit-2026/"],
     "de": ["/de/"],
@@ -241,6 +241,7 @@ def main():
                    '<a class="ghost" href="/metoda-kopertowa/" hreflang="pl" lang="pl">Metoda kopertowa</a>'
                    '<a class="ghost" href="/kula-sniezna-czy-lawina/" hreflang="pl" lang="pl">Spłata długów</a>'
                    '<a class="ghost" href="/arkusz-jdg/" hreflang="pl" lang="pl">Arkusz JDG 2027</a>'
+                   '<a class="ghost" href="/limit-dzialalnosci-nierejestrowanej-2027/" hreflang="pl" lang="pl">Limit działalności nierejestrowanej 2027</a>'
                    '<a class="ghost" href="/de/" hreflang="de" lang="de">Kostenloses Haushaltsbuch 2027</a>'
                    '<a class="ghost" href="/embed/">Embed our calculators on your blog</a></section>')
             h = block(h, "home-hubs", hub, "<footer")

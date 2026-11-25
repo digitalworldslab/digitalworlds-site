@@ -46,6 +46,8 @@
 
 ## Polish (po polsku)
 
+- [Limit działalności nierejestrowanej 2027: kalkulator](https://digitalworlds.cc/limit-dzialalnosci-nierejestrowanej-2027/): 2027 quarterly limit 11 137,50 zł (225% of the 4 950 zł minimum wage); free calculator of how much revenue is left this quarter.
+
 - [Arkusz JDG 2027 (Excel): ZUS, składka zdrowotna, ryczałt czy liniowy](https://digitalworlds.cc/arkusz-jdg/): Arkusz Excel / Arkusze Google dla JDG: ewidencja przychodów i kosztów, ZUS pełny i preferencyjny, składka zdrowotna, zaliczki i porównanie ryczałt vs liniowy vs skala. 49 zł, pobierasz od razu.
 - [Ryczałt czy liniowy? Porównanie na przykładzie freelancera](https://digitalworlds.cc/ryczalt-czy-liniowy/): Ryczałt 12%, podatek liniowy 19% czy skala 12/32%? Przykład dla JDG z 95 600 zł przychodu: ZUS, składka zdrowotna, podatek i ile zostaje na rękę.
 - [Składka zdrowotna JDG 2026: ryczałt, liniowy i skala](https://digitalworlds.cc/skladka-zdrowotna-jdg/): Ile wynosi składka zdrowotna na JDG w 2026 r.? Ryczałt 498,35 / 830,58 / 1 495,04 zł, liniowy 4,9%, skala 9%, minimum 432,54 zł. Przykłady i kalkulator w arkuszu.
