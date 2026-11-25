@@ -1,0 +1,27 @@
+name: Bluesky audience (daily follows)
+on:
+  schedule:
+    - cron: "35 16 * * *"   # 17:35 Warsaw
+  workflow_dispatch:
+    inputs:
+      max_follows:
+        default: "25"
+permissions:
+  contents: write
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+jobs:
+  follow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .social/follow.py
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+          MAX_FOLLOWS: ${{ github.event.inputs.max_follows || '25' }}
+      - run: |
+          git config user.name "dwl-social-bot"; git config user.email "lab@digitalworlds.studio"
+          git add .social/follow-state.json
+          if ! git diff --cached --quiet; then git commit -m "social: follow log [skip ci]"; git pull --rebase origin "${GITHUB_REF_NAME}" && git push; fi
