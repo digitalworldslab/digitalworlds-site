@@ -1,0 +1,480 @@
+[
+ {
+  "id": "bf1",
+  "text": "Black Friday at Digital Worlds Lab: 25% off every budget, debt payoff and savings spreadsheet on Etsy with code BLACKFRIDAY25 (until 1 Dec). Google Sheets + Excel, instant download, euro or any currency.",
+  "url": "https://digitalworldslab.etsy.com",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "blackfriday",
+   "personalfinance"
+  ],
+  "start": "2026-11-27",
+  "end": "2026-12-01"
+ },
+ {
+  "id": "bf2",
+  "text": "Planning to finally sort your money in 2027? The Money Reset Bundle (budget, debt payoff, sinking funds, self-employed income) is 25% off with BLACKFRIDAY25 until 1 December.",
+  "url": "https://digitalworlds.cc/templates/bundle/",
+  "lang": "en",
+  "tags": [
+   "budget2027",
+   "blackfriday"
+  ],
+  "start": "2026-11-27",
+  "end": "2026-12-01"
+ },
+ {
+  "id": "bf3",
+  "text": "Black Friday: arkusze budżetowe po polsku (budżet domowy, spłata długów, JDG 2027) 25% taniej z kodem BLACKFRIDAY25 do 1 grudnia. Excel i Arkusze Google.",
+  "url": "https://digitalworldslab.etsy.com",
+  "lang": "pl",
+  "tags": [
+   "finanse",
+   "budżet"
+  ],
+  "start": "2026-11-28",
+  "end": "2026-12-01"
+ },
+ {
+  "id": "bf4",
+  "text": "Black Friday: Haushaltsbuch 2027 und Schuldenplan als Excel/Google-Sheets-Vorlage, 25 % günstiger mit dem Code BLACKFRIDAY25 bis 1. Dezember.",
+  "url": "https://digitalworldslab.etsy.com",
+  "lang": "de",
+  "tags": [
+   "Haushaltsbuch",
+   "Finanzen",
+   "Sparen"
+  ],
+  "start": "2026-11-29",
+  "end": "2026-12-01"
+ },
+ {
+  "id": "bf5",
+  "text": "Last day: BLACKFRIDAY25 still takes 25% off every spreadsheet in the shop until midnight. Debt snowball, sinking funds, 2027 budget planner, wedding budget.",
+  "url": "https://digitalworldslab.etsy.com",
+  "lang": "en",
+  "tags": [
+   "blackfriday",
+   "budgeting"
+  ],
+  "start": "2026-12-01",
+  "end": "2026-12-01"
+ },
+ {
+  "id": "calc-snowball",
+  "text": "Snowball or avalanche? Add your debts, pick a method and an extra monthly payment, and this free calculator shows your debt-free month, payoff order and total interest. No sign-up.",
+  "url": "https://digitalworlds.cc/debt-snowball-calculator/",
+  "lang": "en",
+  "tags": [
+   "debtfree",
+   "personalfinance",
+   "debtsnowball"
+  ]
+ },
+ {
+  "id": "calc-sinking",
+  "text": "Christmas, car repairs, insurance, holidays: list what's coming and when, and this free sinking funds calculator tells you exactly how much to put aside each month.",
+  "url": "https://digitalworlds.cc/sinking-funds-calculator/",
+  "lang": "en",
+  "tags": [
+   "sinkingfunds",
+   "budgeting"
+  ]
+ },
+ {
+  "id": "calc-503020",
+  "text": "The 50/30/20 rule in 10 seconds: type your take-home pay and see what goes to needs, wants and savings. Then compare it with what you actually spend.",
+  "url": "https://digitalworlds.cc/budget-calculator/",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "503020"
+  ]
+ },
+ {
+  "id": "calc-etsy",
+  "text": "Etsy sellers: a €20 digital download keeps about €17.40 after fees, but only ~€14.40 if Offsite Ads catch the sale. Free calculator for your real profit per sale.",
+  "url": "https://digitalworlds.cc/calculator/",
+  "lang": "en",
+  "tags": [
+   "etsyseller",
+   "smallbusiness"
+  ]
+ },
+ {
+  "id": "calc-selfemp",
+  "text": "Freelancing in the US? This free calculator estimates self-employment tax, income tax and your quarterly payments, so you know what to keep aside from every invoice.",
+  "url": "https://digitalworlds.cc/self-employed-tax-calculator/",
+  "lang": "en",
+  "tags": [
+   "freelance",
+   "selfemployed",
+   "taxes"
+  ]
+ },
+ {
+  "id": "calc-wedding",
+  "text": "Wedding budget in one number? Enter your total and guest count to see a typical split for venue, catering, photos, attire and more. Free, no email needed.",
+  "url": "https://digitalworlds.cc/wedding-budget-calculator/",
+  "lang": "en",
+  "tags": [
+   "wedding",
+   "weddingbudget"
+  ]
+ },
+ {
+  "id": "calc-house",
+  "text": "How much house can you really afford? This free calculator starts from take-home pay (not gross) and gives a comfortable and a stretch price.",
+  "url": "https://digitalworlds.cc/house-affordability-calculator/",
+  "lang": "en",
+  "tags": [
+   "homebuying",
+   "personalfinance"
+  ]
+ },
+ {
+  "id": "calc-rentbuy",
+  "text": "Rent vs buy isn't rent vs mortgage. Owning also costs interest, property tax, upkeep and the return your deposit could have earned. Free calculator finds your break-even.",
+  "url": "https://digitalworlds.cc/rent-vs-buy-calculator/",
+  "lang": "en",
+  "tags": [
+   "housing",
+   "personalfinance"
+  ]
+ },
+ {
+  "id": "calc-car",
+  "text": "The 20/4/10 car rule: 20% down, a loan of 4 years or less, all car costs under 10% of gross income. Check any car price against it in seconds.",
+  "url": "https://digitalworlds.cc/car-affordability-calculator/",
+  "lang": "en",
+  "tags": [
+   "personalfinance",
+   "cars"
+  ]
+ },
+ {
+  "id": "g-snowball",
+  "text": "Worked example: 4 debts, the same €400 a month. Avalanche saved more interest, snowball cleared the first debt months sooner. Which matters more depends on you.",
+  "url": "https://digitalworlds.cc/guides/debt-snowball-vs-avalanche/",
+  "lang": "en",
+  "tags": [
+   "debtfree",
+   "personalfinance"
+  ]
+ },
+ {
+  "id": "g-503020",
+  "text": "50/30/20 on a €2,800 take-home pay: €1,400 needs, €840 wants, €560 savings or debt. And what to do when rent alone eats 40%.",
+  "url": "https://digitalworlds.cc/guides/50-30-20-budget-example/",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "moneytips"
+  ]
+ },
+ {
+  "id": "g-sinking",
+  "text": "15 sinking fund categories most budgets forget (car service, gifts, vet, glasses, annual subscriptions) and the one formula for how much to save each month.",
+  "url": "https://digitalworlds.cc/guides/sinking-funds-list/",
+  "lang": "en",
+  "tags": [
+   "sinkingfunds",
+   "budgeting"
+  ]
+ },
+ {
+  "id": "g-emergency",
+  "text": "How big should your emergency fund be? Count only essential costs, pick 3 or 6 months, and see how long it takes at €250 a month. 5 steps.",
+  "url": "https://digitalworlds.cc/guides/how-much-emergency-fund/",
+  "lang": "en",
+  "tags": [
+   "emergencyfund",
+   "personalfinance"
+  ]
+ },
+ {
+  "id": "g-minpay",
+  "text": "Paying only the minimum on €3,000 at 22% APR takes about 9 years. A fixed payment cuts that to under 3. The worked example:",
+  "url": "https://digitalworlds.cc/guides/credit-card-minimum-payment/",
+  "lang": "en",
+  "tags": [
+   "creditcard",
+   "debtfree"
+  ]
+ },
+ {
+  "id": "g-zerobased",
+  "text": "Zero-based budget on €2,600: 16 envelopes, every euro has a job before the month starts, including fun money. Worked example in 4 steps.",
+  "url": "https://digitalworlds.cc/guides/zero-based-budget-example/",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "zerobasedbudget"
+  ]
+ },
+ {
+  "id": "g-couples",
+  "text": "50/50 or by income? With €2,000 of shared bills and incomes of €3,000 and €2,000, splitting by income means €1,200 / €800. Plus a simple monthly settle-up.",
+  "url": "https://digitalworlds.cc/guides/split-bills-as-a-couple/",
+  "lang": "en",
+  "tags": [
+   "couplesfinance",
+   "budgeting"
+  ]
+ },
+ {
+  "id": "g-networth",
+  "text": "Net worth = everything you own minus everything you owe. Worked example, what to count and what to leave out, and why one number a month beats daily checking.",
+  "url": "https://digitalworlds.cc/guides/how-to-calculate-net-worth/",
+  "lang": "en",
+  "tags": [
+   "networth",
+   "personalfinance"
+  ]
+ },
+ {
+  "id": "g-52week",
+  "text": "52-week savings challenge for 2027: classic (€1,378), reverse, and fixed weekly plans for €5,000 or €10,000. Start in January.",
+  "url": "https://digitalworlds.cc/guides/52-week-savings-challenge/",
+  "lang": "en",
+  "tags": [
+   "savingschallenge",
+   "savemoney"
+  ]
+ },
+ {
+  "id": "g-10k",
+  "text": "Saving €10,000 in 2027 = about €833 a month or €192 a week. A month-by-month plan, and what to do if €10k is too much this year.",
+  "url": "https://digitalworlds.cc/holiday/save-10k-2027/",
+  "lang": "en",
+  "tags": [
+   "savemoney",
+   "2027goals"
+  ]
+ },
+ {
+  "id": "g-reset",
+  "text": "New Year money reset in 7 steps: total up December, list every bill, set a monthly budget, plan sinking funds, choose a debt method, set one savings goal.",
+  "url": "https://digitalworlds.cc/holiday/new-year-budget-reset-2027/",
+  "lang": "en",
+  "tags": [
+   "budget2027",
+   "newyear"
+  ]
+ },
+ {
+  "id": "g-paycheck",
+  "text": "Run out of money before payday? Budget by paycheck: assign each bill to the paycheck before its due date and save first. Biweekly example.",
+  "url": "https://digitalworlds.cc/holiday/budget-by-paycheck/",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "paycheck"
+  ]
+ },
+ {
+  "id": "g-xmas",
+  "text": "A calm Christmas budget: one total, split into gifts, food, travel and extras, every person on a list, tracked as you shop. €900 worked example.",
+  "url": "https://digitalworlds.cc/guides/christmas-budget/",
+  "lang": "en",
+  "tags": [
+   "christmas",
+   "budgeting"
+  ]
+ },
+ {
+  "id": "g-market",
+  "text": "Pricing for a Christmas market: materials + your time + overheads + fees + profit. Worked example with a handmade candle, so you stop undercharging.",
+  "url": "https://digitalworlds.cc/holiday/christmas-market-pricing/",
+  "lang": "en",
+  "tags": [
+   "handmade",
+   "smallbusiness"
+  ]
+ },
+ {
+  "id": "g-etsyfees",
+  "text": "How much does Etsy take per sale? On a €20 item about 13% normally and up to 28% when Offsite Ads bring the sale. Full breakdown:",
+  "url": "https://digitalworlds.cc/guides/etsy-fees-per-sale/",
+  "lang": "en",
+  "tags": [
+   "etsyseller",
+   "etsy"
+  ]
+ },
+ {
+  "id": "g-freelance",
+  "text": "Freelance bookkeeping without an accountant: what to track each month (invoices, expenses, VAT to pay, tax to set aside). Worked monthly example.",
+  "url": "https://digitalworlds.cc/guides/freelance-bookkeeping-spreadsheet/",
+  "lang": "en",
+  "tags": [
+   "freelance",
+   "bookkeeping"
+  ]
+ },
+ {
+  "id": "g-weddingcut",
+  "text": "Cutting the guest list without drama: the A/B/C list method, simple rules for plus-ones and kids, and what 30 fewer guests actually save.",
+  "url": "https://digitalworlds.cc/guides/cut-wedding-guest-list/",
+  "lang": "en",
+  "tags": [
+   "wedding",
+   "weddingplanning"
+  ]
+ },
+ {
+  "id": "g-notion",
+  "text": "Two free Notion budget templates you can duplicate in one click: a category budget with planned vs spent, and a simple ADHD-friendly one.",
+  "url": "https://digitalworlds.cc/guides/notion-budget-template-free/",
+  "lang": "en",
+  "tags": [
+   "notion",
+   "budgeting"
+  ]
+ },
+ {
+  "id": "g-coloring",
+  "text": "Debt payoff colouring chart: 100 squares, each one is 1% of your debt. Colour one in every time you pay. Small, visible wins keep you going.",
+  "url": "https://digitalworlds.cc/guides/debt-payoff-coloring-chart/",
+  "lang": "en",
+  "tags": [
+   "debtfree",
+   "debtpayoff"
+  ]
+ },
+ {
+  "id": "t-debt",
+  "text": "See the month you'll be debt free and the order to pay your debts off: snowball and avalanche side by side in one Google Sheets / Excel spreadsheet.",
+  "url": "https://digitalworlds.cc/templates/debt/",
+  "lang": "en",
+  "tags": [
+   "debtfree",
+   "spreadsheet"
+  ]
+ },
+ {
+  "id": "t-budget",
+  "text": "Your whole 2027 budget in one spreadsheet: plan each month, log what you spend, planned vs actual for every category. Google Sheets + Excel.",
+  "url": "https://digitalworlds.cc/templates/budget/",
+  "lang": "en",
+  "tags": [
+   "budget2027",
+   "spreadsheet"
+  ]
+ },
+ {
+  "id": "t-club",
+  "text": "Money Sheets Club: every budget, debt, savings, self-employed and wedding spreadsheet we make, plus new ones each month. From €5/month.",
+  "url": "https://digitalworlds.cc/club/",
+  "lang": "en",
+  "tags": [
+   "budgeting",
+   "spreadsheet"
+  ]
+ },
+ {
+  "id": "t-notion-free",
+  "text": "5 free Notion finance templates in euro: monthly budget, debt payoff, savings goals and sinking funds, freelancer income, wedding budget.",
+  "url": "https://digitalworlds.cc/notion/",
+  "lang": "en",
+  "tags": [
+   "notion",
+   "notiontemplates"
+  ]
+ },
+ {
+  "id": "pl-budzet",
+  "text": "Darmowy arkusz budżetu domowego 2027 po polsku, w złotówkach: metoda kopertowa i koperty roczne na OC, podatek i święta. Excel i Arkusze Google, bez rejestracji.",
+  "url": "https://digitalworlds.cc/pl/",
+  "lang": "pl",
+  "tags": [
+   "finanse",
+   "budżetdomowy",
+   "oszczędzanie"
+  ]
+ },
+ {
+  "id": "pl-zdrowotna",
+  "text": "Składka zdrowotna JDG 2026: ryczałt 498,35 / 830,58 / 1 495,04 zł, liniowy 4,9%, skala 9%, minimum 432,54 zł. Przykłady i kalkulator.",
+  "url": "https://digitalworlds.cc/skladka-zdrowotna-jdg/",
+  "lang": "pl",
+  "tags": [
+   "JDG",
+   "firma",
+   "podatki"
+  ]
+ },
+ {
+  "id": "pl-ryczalt",
+  "text": "Ryczałt 12%, liniowy 19% czy skala? Porównanie dla JDG z 95 600 zł przychodu: ZUS, zdrowotna, podatek i ile zostaje na rękę.",
+  "url": "https://digitalworlds.cc/ryczalt-czy-liniowy/",
+  "lang": "pl",
+  "tags": [
+   "JDG",
+   "podatki",
+   "freelance"
+  ]
+ },
+ {
+  "id": "pl-nierej",
+  "text": "Działalność nierejestrowana 2026: limit 10 813,50 zł na kwartał, bez ZUS. Zasady, przykłady i co zrobić, gdy przekroczysz limit.",
+  "url": "https://digitalworlds.cc/dzialalnosc-nierejestrowana-limit-2026/",
+  "lang": "pl",
+  "tags": [
+   "firma",
+   "podatki"
+  ]
+ },
+ {
+  "id": "pl-koperty",
+  "text": "Metoda kopertowa w Excelu na przykładzie 6000 zł netto: 10 kopert, 4 kroki i co zrobić, gdy w kopercie zabraknie pieniędzy.",
+  "url": "https://digitalworlds.cc/metoda-kopertowa/",
+  "lang": "pl",
+  "tags": [
+   "budżetdomowy",
+   "oszczędzanie"
+  ]
+ },
+ {
+  "id": "pl-52",
+  "text": "Wyzwanie 52 tygodni 2027: wersja klasyczna 1378 zł, ×5 zł = 6890 zł, ×10 zł = 13 780 zł, oraz odwrócona. Startujesz w styczniu.",
+  "url": "https://digitalworlds.cc/wyzwanie-52-tygodni/",
+  "lang": "pl",
+  "tags": [
+   "oszczędzanie",
+   "finanse"
+  ]
+ },
+ {
+  "id": "pl-kula",
+  "text": "Spłata długów: kula śnieżna (najmniejszy dług najpierw) czy lawina (najwyższe oprocentowanie najpierw)? Przykład z liczbami.",
+  "url": "https://digitalworlds.cc/kula-sniezna-czy-lawina/",
+  "lang": "pl",
+  "tags": [
+   "długi",
+   "finanse"
+  ]
+ },
+ {
+  "id": "pl-jdg",
+  "text": "Arkusz JDG 2027 w Excelu: ewidencja przychodów i kosztów, ZUS pełny i preferencyjny, składka zdrowotna, zaliczki i porównanie form opodatkowania.",
+  "url": "https://digitalworlds.cc/arkusz-jdg/",
+  "lang": "pl",
+  "tags": [
+   "JDG",
+   "firma"
+  ]
+ },
+ {
+  "id": "de-haushaltsbuch",
+  "text": "Kostenloses Haushaltsbuch 2027 auf Deutsch, in Euro: Umschlagmethode mit Rücklagen für Kfz-Versicherung, TÜV und Rundfunkbeitrag. Excel und Google Sheets, ohne Anmeldung.",
+  "url": "https://digitalworlds.cc/de/",
+  "lang": "de",
+  "tags": [
+   "Haushaltsbuch",
+   "Finanzen",
+   "Sparen"
+  ]
+ }
+]

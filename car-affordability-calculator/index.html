@@ -73,5 +73,6 @@ const cap=Math.max(0,inc*.1-run),maxL=principal(cap,r,48),mx=maxL/0.8;$('max').t
 $('verdict').textContent=(p&&dn>=p*.2&&m<=48&&pc<=10)?'This car passes 20/4/10.':'Over the rule. Max price under 20/4/10: about '+money(mx)+'.';}
 document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
 </script>
+<script src="/embed.js" defer></script>
 </body>
 </html>

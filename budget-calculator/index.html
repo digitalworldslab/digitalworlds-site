@@ -76,5 +76,6 @@ if(nd==null&&wt==null){$('left').textContent=money(m*.2);$('lp').textContent='(t
 else{const l=m-(nd||0)-(wt||0);$('left').textContent=money(l);$('lp').textContent=m?'('+Math.round(l/m*100)+'% of take-home)':'';}}
 document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
 </script>
+<script src="/embed.js" defer></script>
 </body>
 </html>

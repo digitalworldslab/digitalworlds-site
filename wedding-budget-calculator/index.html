@@ -66,5 +66,6 @@ function calc(){const t=+$('tot').value||0,g=+$('g').value||0;let p=0,first=0;
  $('pg').textContent=g?money(t/g):'-';$('fg').textContent=g?money(first/g):'-';}
 ['tot','g'].forEach(i=>$(i).addEventListener('input',calc));calc();
 </script>
+<script src="/embed.js" defer></script>
 </body>
 </html>

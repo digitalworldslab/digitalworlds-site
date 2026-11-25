@@ -74,5 +74,6 @@ function calc(){const np=Math.max(0,(+$('inc').value||0)-(+$('exp').value||0)),b
  $('pct').textContent=np?'('+Math.round(t/np*100)+'% of profit)':'';$('q').textContent=money(t/4);}
 document.querySelectorAll('input').forEach(e=>e.addEventListener('input',calc));calc();
 </script>
+<script src="/embed.js" defer></script>
 </body>
 </html>

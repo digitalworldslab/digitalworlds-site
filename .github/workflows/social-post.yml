@@ -1,0 +1,42 @@
+name: Social auto-post (Bluesky + Mastodon)
+
+on:
+  schedule:
+    - cron: "20 7 * * *"    # 08:20 Warsaw
+    - cron: "40 12 * * *"   # 13:40 Warsaw
+    - cron: "10 18 * * *"   # 19:10 Warsaw
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = print only, post nothing"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post next queued item
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || '0' }}
+        run: python3 .social/post.py
+      - name: Save state
+        run: |
+          git config user.name "dwl-social-bot"
+          git config user.email "lab@digitalworlds.studio"
+          git add .social/state.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "social: posted queue item [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push
+          fi
