@@ -1,0 +1,42 @@
+{
+ "followed": [
+  "did:plc:g4qmvlolgiu7vdqcpedojpff",
+  "did:plc:h7xhzoceot67ex45yuh3rez4",
+  "did:plc:drscxwmre5d2k3wb2hxpykpe",
+  "did:plc:flq5abxdolaxna5foyi64n7b",
+  "did:plc:qedb4baccrwtgi2g27m7yw7g",
+  "did:plc:lwxnzeuud7mqxerqviezordn",
+  "did:plc:goqf4x3cujyvoyzkm5gqoisi",
+  "did:plc:o3e37uva64jtobqq7qbn4uvv",
+  "did:plc:2z2zpbtmeauaytpdv7vzgffz",
+  "did:plc:fpp3oajy3clhta7ypobg7hyi",
+  "did:plc:jpli5v2ez6ygzwei5yulklml",
+  "did:plc:h3scsqcdwfmjyvt2nd3tdn7h",
+  "did:plc:xxwzbl73fj5akdtei3ed2fgr",
+  "did:plc:rdwoizey4rgr5p67zfdiqhx2",
+  "did:plc:2ljk44lf465q2v7dkg7i3qst",
+  "did:plc:hmtfz2szmxenupmxiulwmlhp",
+  "did:plc:w6szllo3wwhigwhixejfcuad",
+  "did:plc:rcu7ybho7gdw3x3cxp64jnue",
+  "did:plc:ysg7hp6kgncoryoll2fz2pgk",
+  "did:plc:gwud6rhwj5eme7v5ehkifkke",
+  "did:plc:hvkc7m4mjjm7sd7wxestyh2b",
+  "did:plc:jhlana2tzwtpcu244oznhirb",
+  "did:plc:awrozpfoowlp4svnowtigjwh",
+  "did:plc:x45b7sw3mchrfos42ky4xktk",
+  "did:plc:c454ut26ydc4kywboth4btmu",
+  "did:plc:owo2l6v35uvk3axlrkz6d2wt",
+  "did:plc:a2mj7hi6j2rscrzuigygwr54",
+  "did:plc:i4yli6h7x2uoj7acxunww2fc",
+  "did:plc:pwbrdy6j4ktb34g2344ho4eo",
+  "did:plc:eg3mdumqt6mg33s7wvid6uoh"
+ ],
+ "runs": [
+  {
+   "at": "2026-11-25 19:47",
+   "new": 30,
+   "followers": 0,
+   "follows": 31
+  }
+ ]
+}
