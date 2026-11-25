@@ -1,71 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://digitalworlds.cc/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/budget-calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/debt-snowball-calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/sinking-funds-calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/wedding-budget-calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/self-employed-tax-calculator/</loc><lastmod>2026-11-13</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/billcal/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/budget/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/bundle/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/challenge/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/christmas/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/couples/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/creditcard/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/debt/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/debtcolor/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/emergency/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/etsyseller/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/freelancer/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/guestlist/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/networth/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/paycheck/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/savings/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/selfemp/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/simple/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/wedding/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/weddingbudget/</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://digitalworlds.cc/templates/zerobased/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/debt-snowball-vs-avalanche/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/50-30-20-budget-example/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/sinking-funds-list/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/self-employed-tax-set-aside/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/christmas-budget/</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/pricing/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/profit-loss/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/order-tracker/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/invoice/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/mileage/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/gig-driver/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/timesheet/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/job-tracker/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/calorie/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/grocery/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/student/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/templates/first-apartment/</loc><lastmod>2026-11-19</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/christmas-market-pricing/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/new-year-budget-reset-2027/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/january-savings-challenge/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/save-10k-2027/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/holiday/budget-by-paycheck/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/house-affordability-calculator/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/rent-vs-buy-calculator/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/car-affordability-calculator/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/club/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/arkusz-jdg/</loc><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://digitalworlds.cc/ryczalt-czy-liniowy/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/skladka-zdrowotna-jdg/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/klub/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/budzet-domowy-excel/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/kula-sniezna-czy-lawina/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/dzialalnosc-nierejestrowana-limit-2026/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/notion/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/notion-budget-template-free/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://digitalworlds.cc/guides/notion-net-worth-tracker/</loc><lastmod>2026-11-22</lastmod></url>
-<url><loc>https://digitalworlds.cc/guides/zero-based-budget-example/</loc></url><url><loc>https://digitalworlds.cc/guides/wedding-budget-breakdown/</loc></url><url><loc>https://digitalworlds.cc/guides/how-much-emergency-fund/</loc></url><url><loc>https://digitalworlds.cc/guides/bill-payment-calendar/</loc></url><url><loc>https://digitalworlds.cc/guides/split-bills-as-a-couple/</loc></url><url><loc>https://digitalworlds.cc/guides/credit-card-minimum-payment/</loc></url><url><loc>https://digitalworlds.cc/guides/52-week-savings-challenge/</loc></url><url><loc>https://digitalworlds.cc/guides/how-to-calculate-net-worth/</loc></url><url><loc>https://digitalworlds.cc/guides/debt-payoff-coloring-chart/</loc></url><url><loc>https://digitalworlds.cc/guides/etsy-fees-per-sale/</loc></url><url><loc>https://digitalworlds.cc/guides/freelance-bookkeeping-spreadsheet/</loc></url><url><loc>https://digitalworlds.cc/guides/cut-wedding-guest-list/</loc></url><url><loc>https://digitalworlds.cc/metoda-kopertowa/</loc></url><url><loc>https://digitalworlds.cc/wyzwanie-52-tygodni/</loc></url><url><loc>https://digitalworlds.cc/pl/</loc></url><url><loc>https://digitalworlds.cc/de/</loc></url><url><loc>https://digitalworlds.cc/embed/</loc></url>
+  <url><loc>https://digitalworlds.cc/</loc><lastmod>2026-11-25</lastmod><priority>1.0</priority></url>
+  <url><loc>https://digitalworlds.cc/arkusz-jdg/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/budget-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/budzet-domowy-excel/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/car-affordability-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/club/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/de/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/debt-snowball-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/dzialalnosc-nierejestrowana-limit-2026/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/embed/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/50-30-20-budget-example/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/52-week-savings-challenge/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/bill-payment-calendar/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/christmas-budget/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/credit-card-minimum-payment/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/cut-wedding-guest-list/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/debt-payoff-coloring-chart/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/debt-snowball-vs-avalanche/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/etsy-fees-per-sale/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/freelance-bookkeeping-spreadsheet/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/how-much-emergency-fund/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/how-to-calculate-net-worth/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/notion-budget-template-free/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/notion-net-worth-tracker/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/self-employed-tax-set-aside/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/sinking-funds-list/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/split-bills-as-a-couple/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/wedding-budget-breakdown/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/guides/zero-based-budget-example/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/budget-by-paycheck/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/christmas-market-pricing/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/january-savings-challenge/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/new-year-budget-reset-2027/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/holiday/save-10k-2027/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/house-affordability-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/klub/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/kula-sniezna-czy-lawina/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/metoda-kopertowa/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/notion/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/pl/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/rent-vs-buy-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/ryczalt-czy-liniowy/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/self-employed-tax-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/sinking-funds-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/skladka-zdrowotna-jdg/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/billcal/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/budget/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/bundle/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/calorie/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/challenge/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/christmas/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/couples/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/creditcard/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/debt/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/debtcolor/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/emergency/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/etsyseller/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/first-apartment/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/freelancer/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/gig-driver/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/grocery/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/guestlist/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/invoice/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/job-tracker/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/mileage/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/networth/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/order-tracker/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/paycheck/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/pricing/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/profit-loss/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/savings/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/selfemp/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/simple/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/student/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/timesheet/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/wedding/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/weddingbudget/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/templates/zerobased/</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://digitalworlds.cc/wedding-budget-calculator/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://digitalworlds.cc/wyzwanie-52-tygodni/</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
 </urlset>

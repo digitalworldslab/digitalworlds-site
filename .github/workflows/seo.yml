@@ -1,0 +1,59 @@
+name: SEO postprocess + IndexNow
+# Runs after every push to main: re-applies SEO fixes (.seo/postprocess.py),
+# commits them, then tells Bing/Yandex/Seznam (IndexNow) which pages changed.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['.social/**']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Submit every sitemap URL to IndexNow'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: seo-postprocess
+  cancel-in-progress: false
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 100
+      - name: Apply SEO fixes
+        run: python3 .seo/postprocess.py
+      - name: Commit fixes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "dwl-seo-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "seo: postprocess (titles, meta, OG, hreflang, breadcrumbs, related links, sitemap) [skip ci]"
+            for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
+          fi
+      - name: IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+          ALL: ${{ inputs.all }}
+        run: |
+          KEY=$(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
+          if [ "$ALL" = "true" ] || [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+            URLS=$(grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//')
+          else
+            URLS=$(git diff --name-only "$BEFORE" HEAD -- '*.html' | grep 'index.html$' | sed 's#index.html$##; s#^#https://digitalworlds.cc/#')
+          fi
+          [ -z "$URLS" ] && { echo "nothing to submit"; exit 0; }
+          python3 - "$KEY" <<'PY' $URLS
+          import json, sys, urllib.request
+          key, urls = sys.argv[1], sys.argv[2:]
+          body = json.dumps({"host": "digitalworlds.cc", "key": key,
+                             "keyLocation": f"https://digitalworlds.cc/{key}.txt", "urlList": urls[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", body, {"Content-Type": "application/json; charset=utf-8"})
+          try:
+              print(len(urls), "URLs ->", urllib.request.urlopen(req, timeout=30).status)
+          except Exception as e:
+              print("IndexNow error:", e)
+          PY
