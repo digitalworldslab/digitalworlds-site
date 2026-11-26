@@ -3,7 +3,8 @@
   "posted": [
    "calc-snowball",
    "calc-sinking",
-   "calc-503020"
+   "calc-503020",
+   "calc-etsy"
   ],
   "log": [
    {
@@ -20,6 +21,11 @@
     "id": "calc-503020",
     "at": "2026-11-26T01:45+00:00",
     "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n36kgmy3ss2t"
+   },
+   {
+    "id": "calc-etsy",
+    "at": "2026-11-26T17:44+00:00",
+    "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n3a7zi53c52c"
    }
   ]
  },
@@ -27,7 +33,8 @@
   "posted": [
    "calc-snowball",
    "calc-sinking",
-   "calc-503020"
+   "calc-503020",
+   "calc-etsy"
   ],
   "log": [
    {
@@ -44,6 +51,11 @@
     "id": "calc-503020",
     "at": "2026-11-26T01:45+00:00",
     "ref": "https://mastodon.social/@digitalworldslab/117680211898487804"
+   },
+   {
+    "id": "calc-etsy",
+    "at": "2026-11-26T17:44+00:00",
+    "ref": "https://mastodon.social/@digitalworldslab/117683982883328925"
    }
   ]
  }
