@@ -109,7 +109,7 @@ def card(k):
     size=64
     while True:
         hf=F(XB,size); lines=wrap(d,head,hf,470)
-        if len(lines)<=3 or size<=48: break
+        if (len(lines)<=3 and max(d.textlength(l,font=hf) for l in lines)<=470) or size<=36: break
         size-=4
     yy=150
     for l in lines: d.text((56,yy),l,font=hf,fill=NAVY); yy+=int(size*1.12)
