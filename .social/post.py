@@ -102,10 +102,14 @@ def bsky_post(item):
     sess = jpost(f"{base}/xrpc/com.atproto.server.createSession", {"identifier": handle, "password": pw})
     auth = {"Authorization": "Bearer " + sess["accessJwt"]}
     external = {"uri": url, "title": meta["title"][:300], "description": meta["description"][:1000]}
-    img = item.get("image") or meta["image"]
+    card = os.path.join(HERE, "cards", item["id"] + ".jpg")
+    img = card if os.path.exists(card) else (item.get("image") or meta["image"])
     if img:
         try:
-            data, ctype = http(img, timeout=30)
+            if os.path.exists(img):
+                data, ctype = open(img, "rb").read(), "image/jpeg"
+            else:
+                data, ctype = http(img, timeout=30)
             if len(data) < 950_000:
                 up_req = urllib.request.Request(
                     f"{base}/xrpc/com.atproto.repo.uploadBlob", data=data, method="POST",
@@ -141,8 +145,19 @@ def mastodon_post(item):
     if DRY:
         print("  [dry] mastodon:", status.replace("\n", " | "))
         return "dry"
-    data = urllib.parse.urlencode({"status": status, "language": item.get("lang", "en"),
-                                   "visibility": "public"}).encode()
+    fields = [("status", status), ("language", item.get("lang", "en")), ("visibility", "public")]
+    card = os.path.join(HERE, "cards", item["id"] + ".jpg")
+    if os.path.exists(card):
+        import uuid
+        bnd = uuid.uuid4().hex
+        body = (f'--{bnd}\r\nContent-Disposition: form-data; name="description"\r\n\r\n'
+                f'{item.get("alt") or item["text"][:400]}\r\n'
+                f'--{bnd}\r\nContent-Disposition: form-data; name="file"; filename="card.jpg"\r\n'
+                f'Content-Type: image/jpeg\r\n\r\n').encode() + open(card, "rb").read() + f"\r\n--{bnd}--\r\n".encode()
+        mb, _ = http(f"{inst}/api/v2/media", body, {"Authorization": "Bearer " + token,
+                     "Content-Type": f"multipart/form-data; boundary={bnd}"}, "POST", timeout=60)
+        fields.append(("media_ids[]", json.loads(mb)["id"]))
+    data = urllib.parse.urlencode(fields).encode()
     body, _ = http(f"{inst}/api/v1/statuses", data,
                    {"Authorization": "Bearer " + token, "Idempotency-Key": "dwl-" + item["id"]}, "POST")
     return json.loads(body).get("url", "ok")
