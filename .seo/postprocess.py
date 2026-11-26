@@ -14,6 +14,7 @@ What it does on every page (index.html files; skips /pins/ and verification file
   * adds BreadcrumbList JSON-LD
   * adds a "Related" block of internal links built from topic clusters (CLUSTERS)
   * homepage: WebSite + Organization JSON-LD, links to PL/DE hubs and /embed/
+  * GoatCounter analytics + shop-click events (/stats.js) on every page
   * rebuilds sitemap.xml (every page, lastmod = last git commit of the file)
 
 New pages: add their path to a cluster below so they get linked in.
@@ -25,6 +26,8 @@ from datetime import date
 SITE = "https://digitalworlds.cc"
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DEFAULT_IMG = SITE + "/social-assets/banner.jpg"
+# GoatCounter site code (free, cookieless analytics). Dashboard: https://<code>.goatcounter.com
+GOATCOUNTER = "digitalworldslab"
 BRAND_SUFFIX = re.compile(r"\s*[|–-]\s*Digital Worlds Lab\s*$")
 
 # Pages that are the same content in another language.
@@ -246,11 +249,17 @@ def main():
                    '<a class="ghost" href="/embed/">Embed our calculators on your blog</a></section>')
             h = block(h, "home-hubs", hub, "<footer")
 
+        # 8. analytics (all pages)
+        if GOATCOUNTER:
+            gc = ('<script src="/stats.js"></script>'
+                  f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>')
+            h = block(h, "stats", gc, "</body>")
+
         if h != h0:
             open(f, "w", encoding="utf-8").write(h)
             changed += 1
 
-    # 8. sitemap
+    # 9. sitemap
     rows = []
     for url in sorted(P, key=lambda u: (u != "/", u)):
         if meta[url]["noindex"]:
