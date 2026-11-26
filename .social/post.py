@@ -171,6 +171,9 @@ def pick(queue, done, platform, today):
 
 
 def main():
+    if os.path.exists(os.path.join(HERE, "PAUSED")):
+        print("queue paused (.social/PAUSED exists)")
+        return 0
     queue = json.load(open(QUEUE, encoding="utf-8"))
     state = json.load(open(STATE, encoding="utf-8")) if os.path.exists(STATE) else {}
     today = dt.date.today().isoformat()
