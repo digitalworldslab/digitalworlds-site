@@ -12,7 +12,7 @@ fields = {
     "fields_attributes[2][name]": "Deutsch", "fields_attributes[2][value]": "https://digitalworlds.cc/de/",
     "discoverable": "true", "indexable": "true",
 }
-files = {"avatar": "social-assets/avatar.jpg", "header": "social-assets/banner.jpg"}
+files = {"avatar": "social-assets/avatar-v2.jpg", "header": "social-assets/banner-v2.jpg"}
 b = uuid.uuid4().hex
 body = b""
 for k, v in fields.items():
