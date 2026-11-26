@@ -9,7 +9,7 @@ What it does on every page (index.html files; skips /pins/ and verification file
   * shortens <title> over 65 chars by dropping the " | Digital Worlds Lab" suffix
   * extends meta descriptions shorter than 120 chars on template pages
   * fills missing Open Graph / Twitter tags (og:title, og:description, og:url,
-    og:type, og:image from the first page image, twitter:card)
+    og:type, twitter:card) and og:image/twitter:image = og/<slug>.jpg card
   * adds hreflang alternates for pages that exist in more than one language
   * adds BreadcrumbList JSON-LD
   * adds a "Related" block of internal links built from topic clusters (CLUSTERS)
@@ -180,7 +180,15 @@ def main():
             tags.append(f'<meta property="og:type" content="{"website" if url in ("/", "/pl/", "/de/") else "article"}">')
         if 'property="og:locale"' not in h:
             tags.append(f'<meta property="og:locale" content="{ {"en": "en_GB", "pl": "pl_PL", "de": "de_DE"}.get(lang, "en_GB") }">')
-        if 'property="og:image"' not in h:
+        # link-preview image: the page's own 1200x630 card from og/ (built by .seo/make_og.py)
+        card = os.path.join(ROOT, "og", (url.strip("/").replace("/", "-") or "home") + ".jpg")
+        if os.path.exists(card):
+            h = re.sub(r'<meta (?:property|name)="(?:og:image(?::\w+)?|twitter:image)" content="[^"]*"\s*/?>', "", h)
+            ogi = SITE + "/og/" + os.path.basename(card)
+            tags.append(f'<meta property="og:image" content="{ogi}"><meta property="og:image:width" content="1200">'
+                        f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{t}">'
+                        f'<meta name="twitter:image" content="{ogi}">')
+        elif 'property="og:image"' not in h:
             img = get(h, r'<img[^>]+src="(/[^"]+\.(?:jpg|jpeg|png|webp))"')
             tags.append(f'<meta property="og:image" content="{SITE + img if img else DEFAULT_IMG}">')
         if 'name="twitter:card"' not in h:

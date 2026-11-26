@@ -23,6 +23,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 100
+      - name: Link-preview cards for new pages
+        run: pip install -q pillow && python3 .seo/make_og.py
       - name: Apply SEO fixes
         run: python3 .seo/postprocess.py
       - name: Commit fixes
