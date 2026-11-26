@@ -2,7 +2,8 @@
  "bluesky": {
   "posted": [
    "calc-snowball",
-   "calc-sinking"
+   "calc-sinking",
+   "calc-503020"
   ],
   "log": [
    {
@@ -14,13 +15,19 @@
     "id": "calc-sinking",
     "at": "2026-11-25T21:57+00:00",
     "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n365oukmtb2c"
+   },
+   {
+    "id": "calc-503020",
+    "at": "2026-11-26T01:45+00:00",
+    "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n36kgmy3ss2t"
    }
   ]
  },
  "mastodon": {
   "posted": [
    "calc-snowball",
-   "calc-sinking"
+   "calc-sinking",
+   "calc-503020"
   ],
   "log": [
    {
@@ -32,6 +39,11 @@
     "id": "calc-sinking",
     "at": "2026-11-25T21:57+00:00",
     "ref": "https://mastodon.social/@digitalworldslab/117679315205893615"
+   },
+   {
+    "id": "calc-503020",
+    "at": "2026-11-26T01:45+00:00",
+    "ref": "https://mastodon.social/@digitalworldslab/117680211898487804"
    }
   ]
  }
