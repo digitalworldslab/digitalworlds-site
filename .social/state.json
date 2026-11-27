@@ -6,7 +6,8 @@
    "calc-503020",
    "calc-etsy",
    "calc-selfemp",
-   "bf1"
+   "bf1",
+   "bf2"
   ],
   "log": [
    {
@@ -38,6 +39,11 @@
     "id": "bf1",
     "at": "2026-11-27T01:42+00:00",
     "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n3b2psuvpm2n"
+   },
+   {
+    "id": "bf2",
+    "at": "2026-11-27T17:28+00:00",
+    "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n3cpm4uywr2e"
    }
   ]
  },
@@ -48,7 +54,8 @@
    "calc-503020",
    "calc-etsy",
    "calc-selfemp",
-   "bf1"
+   "bf1",
+   "bf2"
   ],
   "log": [
    {
@@ -80,6 +87,11 @@
     "id": "bf1",
     "at": "2026-11-27T01:42+00:00",
     "ref": "https://mastodon.social/@digitalworldslab/117685861747273835"
+   },
+   {
+    "id": "bf2",
+    "at": "2026-11-27T17:28+00:00",
+    "ref": "https://mastodon.social/@digitalworldslab/117689583230497968"
    }
   ]
  }
