@@ -7,7 +7,8 @@
    "calc-etsy",
    "calc-selfemp",
    "bf1",
-   "bf2"
+   "bf2",
+   "calc-wedding"
   ],
   "log": [
    {
@@ -44,6 +45,11 @@
     "id": "bf2",
     "at": "2026-11-27T17:28+00:00",
     "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n3cpm4uywr2e"
+   },
+   {
+    "id": "calc-wedding",
+    "at": "2026-11-27T21:36+00:00",
+    "ref": "at://did:plc:zdcfjww3ovhunpscu54ynnke/app.bsky.feed.post/3n3d5h6l6bs2d"
    }
   ]
  },
@@ -55,7 +61,8 @@
    "calc-etsy",
    "calc-selfemp",
    "bf1",
-   "bf2"
+   "bf2",
+   "calc-wedding"
   ],
   "log": [
    {
@@ -92,6 +99,11 @@
     "id": "bf2",
     "at": "2026-11-27T17:28+00:00",
     "ref": "https://mastodon.social/@digitalworldslab/117689583230497968"
+   },
+   {
+    "id": "calc-wedding",
+    "at": "2026-11-27T21:36+00:00",
+    "ref": "https://mastodon.social/@digitalworldslab/117690557416463355"
    }
   ]
  }
