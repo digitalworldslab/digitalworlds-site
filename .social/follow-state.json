@@ -29,7 +29,32 @@
   "did:plc:a2mj7hi6j2rscrzuigygwr54",
   "did:plc:i4yli6h7x2uoj7acxunww2fc",
   "did:plc:pwbrdy6j4ktb34g2344ho4eo",
-  "did:plc:eg3mdumqt6mg33s7wvid6uoh"
+  "did:plc:eg3mdumqt6mg33s7wvid6uoh",
+  "did:plc:qz2dun535czcth7iqk5fjbgn",
+  "did:plc:p65g42abfdrp6e3io2d2v5mc",
+  "did:plc:vanfaa2f3yksnwkbwhxx2ae5",
+  "did:plc:lsvwix4kq54cf4hg6sg54yxz",
+  "did:plc:crgtvpeeejbu5q27bjynsadi",
+  "did:plc:26ashtegmhqsngnxgtka3g55",
+  "did:plc:5dmc32zzmhloz7yw66ik5vn5",
+  "did:plc:quxqehsgg6kainuk76atozq6",
+  "did:plc:yirrmppdro2qupftrlrnt33g",
+  "did:plc:mtoqtss6tvv7iyhb2esjccsj",
+  "did:plc:h7dfm3xvswww543aqou2ogwe",
+  "did:plc:wyqn6nde36sfxavi7s3r2m3k",
+  "did:plc:tyizwviuozhcqvfteef56kdu",
+  "did:plc:6lhruzohfjnknzpm56zsvsyj",
+  "did:plc:sg4axpe2itpv6lnvhfqgbkrn",
+  "did:plc:ihix6m7wcrokpmttyqpc2vjz",
+  "did:plc:kedhb5tt6mweojr34cqwdxsu",
+  "did:plc:bn5a36tzgyu5xnnsncs46hnk",
+  "did:plc:nxgt7575frbq3j3bh4elxc2n",
+  "did:plc:xh3tnvjsfuv4t4veuixtnf6q",
+  "did:plc:advqql3rbbwclwhxp2ltadsu",
+  "did:plc:mkos2q3cnrzri2sf66lvlkt4",
+  "did:plc:rvwhgktmgoxyzgnm2mxmuc3d",
+  "did:plc:6rpcvt5j6nj2yu34wkonnimn",
+  "did:plc:s7vvkgjmjvp65ox6wdjbyd3n"
  ],
  "runs": [
   {
@@ -37,6 +62,12 @@
    "new": 30,
    "followers": 0,
    "follows": 31
+  },
+  {
+   "at": "2026-11-27 00:48",
+   "new": 25,
+   "followers": 0,
+   "follows": 56
   }
  ]
 }
