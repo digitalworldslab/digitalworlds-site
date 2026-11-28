@@ -36,16 +36,19 @@ HREFLANG = [
     {"en": "/guides/debt-snowball-vs-avalanche/", "pl": "/kula-sniezna-czy-lawina/"},
     {"en": "/guides/52-week-savings-challenge/", "pl": "/wyzwanie-52-tygodni/"},
     {"pl": "/pl/", "de": "/de/"},
+    {"en": "/guides/no-spend-challenge-2027/", "pl": "/wyzwanie-bez-wydawania/", "de": "/de/no-spend-challenge/"},
+    {"en": "/guides/cash-stuffing-budget-2027/", "pl": "/metoda-kopertowa/", "de": "/de/umschlagmethode-rechner/"},
 ]
 
 # Topic clusters for related links. Order inside a cluster = priority.
 CLUSTERS = {
-    "budget": ["/budget-calculator/", "/guides/50-30-20-budget-example/", "/guides/zero-based-budget-example/",
+    "budget": ["/budget-calculator/", "/guides/budget-template-2027/", "/guides/cash-stuffing-budget-2027/", "/guides/50-30-20-budget-example/", "/guides/zero-based-budget-example/",
                "/holiday/budget-by-paycheck/", "/guides/bill-payment-calendar/", "/guides/split-bills-as-a-couple/",
-               "/guides/notion-budget-template-free/", "/holiday/new-year-budget-reset-2027/"],
+               "/guides/notion-budget-template-free/", "/holiday/new-year-budget-reset-2027/", "/guides/single-parent-budget/",
+               "/guides/subscription-audit/"],
     "debt": ["/debt-snowball-calculator/", "/guides/debt-snowball-vs-avalanche/",
              "/guides/credit-card-minimum-payment/", "/guides/debt-payoff-coloring-chart/"],
-    "savings": ["/sinking-funds-calculator/", "/guides/sinking-funds-list/", "/guides/how-much-emergency-fund/",
+    "savings": ["/sinking-funds-calculator/", "/guides/financial-goals-2027/", "/guides/no-spend-challenge-2027/", "/guides/sinking-funds-list/", "/guides/how-much-emergency-fund/",
                 "/guides/52-week-savings-challenge/", "/holiday/january-savings-challenge/",
                 "/holiday/save-10k-2027/", "/guides/how-to-calculate-net-worth/", "/guides/notion-net-worth-tracker/"],
     "wedding": ["/wedding-budget-calculator/", "/guides/wedding-budget-breakdown/", "/guides/cut-wedding-guest-list/"],
@@ -56,10 +59,13 @@ CLUSTERS = {
                 "/holiday/christmas-market-pricing/"],
     "home": ["/house-affordability-calculator/", "/rent-vs-buy-calculator/", "/car-affordability-calculator/",
              "/holiday/save-10k-2027/"],
-    "pl": ["/pl/", "/limit-dzialalnosci-nierejestrowanej-2027/", "/ksef-2027-mala-firma/", "/najem-prywatny-2027/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
+    "pl": ["/pl/", "/kalkulator-budzetu-domowego/", "/wyzwanie-bez-wydawania/", "/limit-dzialalnosci-nierejestrowanej-2027/", "/ksef-2027-mala-firma/", "/najem-prywatny-2027/", "/budzet-domowy-excel/", "/metoda-kopertowa/", "/kula-sniezna-czy-lawina/",
            "/wyzwanie-52-tygodni/", "/klub/", "/arkusz-jdg/", "/ryczalt-czy-liniowy/",
            "/skladka-zdrowotna-jdg/", "/dzialalnosc-nierejestrowana-limit-2026/"],
-    "de": ["/de/"],
+    "de": ["/de/", "/de/umschlagmethode-rechner/", "/de/no-spend-challenge/"],
+    "newyear": ["/guides/budget-template-2027/", "/guides/cash-stuffing-budget-2027/", "/guides/no-spend-challenge-2027/",
+                "/guides/financial-goals-2027/", "/guides/subscription-audit/", "/holiday/new-year-budget-reset-2027/",
+                "/holiday/january-savings-challenge/", "/guides/single-parent-budget/"],
 }
 # Product (template) pages point to the guides/calculators of their topic.
 TEMPLATE_TOPIC = {

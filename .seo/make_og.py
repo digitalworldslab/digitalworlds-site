@@ -85,6 +85,11 @@ OVERRIDES = {
     "/klub/": ("ABONAMENT", "Klub Arkuszy: wszystkie arkusze w jednym miejscu", "Budżet, długi, JDG · 7 dni za darmo"),
     "/club/": ("MEMBERSHIP", "Money Sheets Club", "Every money spreadsheet, new ones monthly"),
     "/": ("FREE MONEY TOOLS", "Practical money tools and spreadsheets", "Free calculators + Google Sheets & Excel templates"),
+    "/wyzwanie-bez-wydawania/": ("DARMOWY TRACKER", "Wyzwanie bez wydawania 2027", "Zasady, tracker 31 dni do druku i kalkulator"),
+    "/kalkulator-budzetu-domowego/": ("DARMOWY KALKULATOR", "Kalkulator budżetu domowego 2027", "Ile na co wydawać: 50/30/20 w złotówkach"),
+    "/de/umschlagmethode-rechner/": ("KOSTENLOSER RECHNER", "Umschlagmethode: Rechner 2027", "Bargeld-Budget auf Umschläge aufteilen"),
+    "/de/no-spend-challenge/": ("KOSTENLOS", "No-Spend-Januar 2027", "Regeln, Tracker zum Ausdrucken und Spar-Rechner"),
+    "/guides/budget-template-2027/": ("FREE TEMPLATE", "Free 2027 Budget Template", "Fill in online, print or download as CSV"),
     "/embed/": ("FOR BLOGGERS", "Free money calculators for your blog", "Embed with one line of code, no ads"),
 }
 
@@ -141,7 +146,7 @@ def card(url, path, dest):
     size = 64
     while True:
         hf = font("ExtraBold", size); lines = wrap(d, head, hf, width)
-        if len(lines) <= 3 or size <= 44:
+        if (len(lines) <= 3 and max(d.textlength(l, font=hf) for l in lines) <= width) or size <= 40:
             break
         size -= 4
     yy = 150
